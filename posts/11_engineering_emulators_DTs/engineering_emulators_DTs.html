@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Adrià Salvador, Ponç Palau">
-<meta name="dcterms.date" content="2022-10-12">
-<meta name="description" content="Adrià Salvador and Ponç Palau (Glovo) present the development of Glovo’s language modelling tools.">
+<meta name="author" content="Ron Kenett">
+<meta name="dcterms.date" content="2024-02-19">
+<meta name="description" content="Prof.&nbsp;Ron Kenett discusses his recent DCE webinar, and how statistical tools can be used to build Digital Twins.">
 
-<title>Automating Supply Chains: How Heavy is My Shopping? – DCE-blog</title>
+<title>Engineering, emulators, digital twins and performance engineering Data-Centric Engineering – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,14 +120,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Automating Supply Chains: How Heavy is My Shopping?</h1>
+      <h1 class="title">Engineering, emulators, digital twins and performance engineering Data-Centric Engineering</h1>
                   <div>
         <div class="description">
-          Adrià Salvador and Ponç Palau (Glovo) present the development of Glovo’s language modelling tools.
+          Prof.&nbsp;Ron Kenett discusses his recent DCE webinar, and how statistical tools can be used to build Digital Twins.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Translational</div>
+                <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Seminar</div>
               </div>
                   </div>
   </div>
@@ -138,14 +139,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Adrià Salvador, Ponç Palau </p>
+               <p>Ron Kenett </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 12, 2022</p>
+        <p class="date">February 19, 2024</p>
       </div>
     </div>
     
@@ -164,74 +165,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. Adrià Salvador and Ponç Palau (<a href="https://glovoapp.com/">Glovo</a>) present the development of Glovo’s language modelling tools, which inform their logistics algorithms by estimating the weight of deliveries.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.neaman.org.il/EN/Ron-Kenett">Professor Ron Kenett</a> discusses his recent <a href="https://youtu.be/zC48sQLjEYQ?si=dkiMgK6hcQkiMe8c">DCE webinar</a>, which covers how statistical tools can be used to build Digital Twins in engineering applications.</em></p>
 <hr>
-<p>Glovo is one of Europe’s largest on-demand delivery platforms, operating in more than 25 countries, and 1500+ cities. Due to increased demand in the grocery sector, in recent years the company has shifted from being a mostly food delivery service to a service where groceries play a major role.</p>
-<p>One of the biggest challenges that we faced at Glovo when moving to the grocery delivery space was the increased prevalence of big orders — orders that would not fit in the backpack of our couriers, or orders that were too heavy to be transported. This made sense: when ordering groceries online, customers order more items than, for instance, when they are getting their office lunch.</p>
-<p><img src="Picture1.jpg" class="img-fluid"></p>
-<p>Appropriately detecting and handling big orders was crucial. A big order that goes undetected has significantly worse unit economic costs than a normal order: agents have to get involved, delivery times increase, and user experience deteriorates. Worse than that, if a <em>small order</em> is incorrectly flagged as a <em>big order</em>, it costs us nearly double to process, as we have to dispatch two or more couriers to handle it.</p>
-<p>Our initial solution was to ask big grocery stores to label their products by providing us with weight and volume measurements. This was successful in labelling a fraction of our product offering and allowed for a certain level of automation. However, it proved hard to scale: we operate with thousands of Small and Medium-sized Enterprise partners in a <a href="https://about.glovoapp.com/">massively diverse</a> environment (from eastern Europe to sub-Saharan Africa). This meant that asking our partners to manually label all their products was not a realistic strategy. We needed a way to fully automate our weight and volume estimations.</p>
-<section id="the-importance-of-data-centric-ai-for-our-production-model" class="level1">
-<h1>The importance of Data-Centric AI for our production model</h1>
-<p>When looking at the labelled data provided by our partners, we realised that they contain a significant amount of wrongly inputted data. Typos, measurement unit misunderstandings, and other mistakes were prevalent.</p>
-<p>The first step that we took to fix this was to clean the large dataset of labelled data until we obtained a fully reliable dataset. Very much in the spirit of <a href="https://datacentricai.org/">data-centric AI</a>, we have consistently observed that the biggest gains in accuracy result from curating the datasets used to train our models.</p>
-<p>To do this, we used a combination of <a href="https://en.wikipedia.org/wiki/Isolation_forest">isolation forests</a> and distribution-based outlier detection to prune out samples with clearly incorrect labels. We first removed the values that were extremely high in our dataset using high-level business-related information. However, these outliers were not the single source of error in our dataset. We still had samples that were incorrectly labelled due to confusion with measurement units: grams instead of kilograms, meters instead of millimeters, etc. In order to detect and correct these samples, we applied the following rules:</p>
-<ol type="1">
-<li><p>During our EDA, we noticed that stores often had consistent labelling errors (for example, confusing grams and kilograms or meters and centimetres). Therefore, we grouped our samples by store and then analysed the median weight and volume associated with that store. For the case of weight, in the lower and upper quantiles, we could detect stores that mislabeled their product due to an error with measurement units. For the volume case, it was more complex because the final label (volume) was the result of the product of height, width, and length: an error in a single dimension could corrupt the final label. To solve this problem, we ran an isolation forest algorithm to detect outliers on the data (grouped by store) in the 3D space of height, width and length. These allowed us to spot errors in each dimension and correct them.</p></li>
-<li><p>We used regex methods and the <a href="https://github.com/nielstron/quantulum3/tree/dev/quantulum3">quantulum</a> library to extract any present amounts of weight or volume in the product name. For example, for the product name “Coca Cola 330 ml’’ this processing would extract 0.33 l. We used this output as a prior to update the distribution of possible weights and volumes with a heuristic.</p></li>
-<li><p>Finally, we manually reviewed the examples that had the highest variance and highest entropy of the labels, as well as the products that are bought most frequently, and labelled them correctly.</p></li>
-</ol>
-</section>
-<section id="the-architecture-language-models-come-to-play" class="level1">
-<h1>The architecture: Language Models come to play</h1>
-<p>Due to engineering constraints, we decided to build a model that would take input features as solely the name of our products in natural language. The model would then have to predict the weight and volume of the given product with high precision.</p>
-<p>The state of the art for NLP processing are Large Language Models, concretely, models based on the <a href="https://huggingface.co/course/chapter1/4?fw=pt">transformer</a> (encoder-decoder) architecture. Initially, we tried to solve the problem using a vanilla architecture: a multilingual transformer with downstream fully connected layers. This showed strong performance, but we were convinced that we could improve the model using domain knowledge. We wanted to use the fact that we knew exactly what parts of the text contained strong information with regard to product dimensions.</p>
-<p>This line of thought followed another important <a href="https://nilg.ai/blog/202102/embedding-domain-knowledge/">principle</a> of production ML systems: when you have domain knowledge regarding the problem, you should use it. To do so, we used quantulum to extract normalised weight and volume measurements from product names. For example, for “Coca-cola 300 ml”, we extract 330 millilitres as a volume feature and normalize it to a common unit.</p>
-<p>These extracted measurements enter the model through a separate, fully connected, tower (neural network). The output of the two towers (transformer and quantulum) is then merged and sent downstream through further fully connected layers. The final prediction is a measurement, either weight or volume, that then is aggregated and compared with our weight and volume limits, to determine whether the order is big.</p>
+<p>New developments in sensing technologies, big data, storage, and advanced analytics, all affect modern systems engineering. In the most recent DCE webinar, we discuss changes at a conceptual level to consider design optimisation and performance engineering — while aiming for responsive monitoring, diagnostic, prognostic, and prescriptive capabilities. We present a new modelling approach, stochastic emulators, and show how emulators can be used to complement <a href="https://arxiv.org/abs/1905.06391">finite element</a> and computational fluid dynamic computational models. An organising framework for this conceptual shift is provided by digital twins, introduced through case studies.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Picture2.png" class="img-fluid figure-img"></p>
-<figcaption>The deep learning architecture that we ended up using in production. Fully connected layers represent the simplest component in deep learning architectures, corresponding to non-linear perceptrons.</figcaption>
+<p><img src="priyadharshan-saba-3euV-7cbqxY-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Priyadharshan Saba on Unsplash</figcaption>
 </figure>
 </div>
-<p>This architecture has been extremely successful and provided a significant delta in accuracy, compared to using a transformer, to directly learn the weights and volumes in the dataset.</p>
-</section>
-<section id="deploying-llms-in-production-at-low-latency" class="level1">
-<h1>Deploying LLMs in production at low latency</h1>
-<p>We deploy the model using our <a href="https://www.youtube.com/watch?v=lVST4KFdb_c">machine learning platform</a>. In short: we <a href="https://www.docker.com/">dockerise</a> the model and serve it through an API. We need the model to do predictions in low latency (response time) because it will be consumed by humans, and user experience gets significantly <a href="https://www.nngroup.com/articles/response-times-3-important-limits/">deteriorated</a> with higher latency times.</p>
-<p>To achieve a latency of approximately 100 milliseconds, we deploy the volume and weight models separately and use distilbert as a pre-trained model for our transformer tower. <a href="https://huggingface.co/docs/transformers/model_doc/distilbert">Distilbert</a> is a conversion of the popular language model “BERT” that provides 60% better latency while preserving 97% accuracy. Autoscaling is handled by <a href="https://kubernetes.io/">kubernetes</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Picture3.jpg" class="img-fluid figure-img"></p>
-<figcaption>Knowing how much an order weighs is crucial to determine which transport type will be used</figcaption>
-</figure>
-</div>
-</section>
-<section id="evaluation-of-the-algorithm" class="level1">
-<h1>Evaluation of the algorithm</h1>
-<p>We focus on measuring two types of metrics (i) offline model accuracy metrics such as mean absolute error and mean squared error, and (ii) online business-related metrics such as agent costs, courier complaints, etc.</p>
-<p>We have run a backtest based on business metrics using our historical data for orders. Essentially, we look at which orders that were flagged as big by agents or couriers would be detected by our new algorithm. To do this, we try two different heuristics (i) using the language model algorithm only when weights and volumes data are missing, (ii) using the language model all the time, even when labels are available. The second heuristic performs more than 11 points (11% in absolute terms) in precision better than the first one.</p>
-<p>For the second heuristic, we use the machine learning model as an anomaly detector. When weight or volume information is available, our backend compares it with the output of the model, and only if the model prediction is close to the weight stored in the backend, it considers the label valid. Otherwise, the network output is used. What this essentially means is that our network is more precise than our labels — as it has been trained with a well-curated dataset.</p>
-<p>We need online business metrics because our big order labels are not perfect. Using the algorithm to analyze all our past orders, we observed that couriers had, on some occasions, taken orders that were heavier than what they were supposed to be. This means that if a courier takes an order without reaching courier support, we can’t really consider that order to be small. Similarly, we have observed instances of orders labelled as big by customer support that were in fact small orders. Both examples are prevalent and mean that we need to use a real-world A/B test to measure our algorithm’s impact.</p>
-<p>To do so, we have scheduled to run an A/B test that will focus on a medley of indicative metrics that we know are directly related to the accuracy of our big order algorithm. These are related to agent cost and handling time, user experience, delivery time, courier complaints, and a metric that is crucial for our bottom line: cost per order.</p>
-</section>
-<section id="conclusion-and-future-steps" class="level1">
-<h1>Conclusion and future steps</h1>
-<p>In conclusion, at Glovo we have seen that:</p>
-<ol type="1">
-<li><p>Transformers can be used for much more than traditional Natural Language Processing.</p></li>
-<li><p>A mid-size dataset of very well-labelled examples can help algorithms scale globally at high precision. Data-Centric techniques were the ones that provided the biggest jump in accuracy for our model.</p></li>
-<li><p>For real-life situations, where data can be faulty, one can use deployed deep learning models as outlier detectors. Similar to what is done with autoencoders, a deployed model is a reflection of the distribution that is trained upon, and it can be used to find out-of-distribution examples.</p></li>
-<li><p>If possible, one should always encode domain knowledge within the model architecture. After Data-Centric techniques, this was the second most important modification in terms of accuracy.</p></li>
-</ol>
+<p>The first study is based on digital twins of <a href="https://www.nature.com/articles/s41598-023-45204-1">train locomotives</a>. The approach combines individual representations of brake systems, safety valves, and suspension frames. These <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/qre.2948">digital twins</a> enable monitoring, diagnostic, prognostic and prescriptive analytics of locomotives, to enhance safe and cost-effective condition-based maintenance. A second, more pedagogical example, is based on a combustion piston simulator that derives cycle time performance, after setting up seven input variables. The piston is introduced and integrated in notebooks offering code in <a href="https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903">R</a>, <a href="https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903">JMP</a> and <a href="https://gedeck.github.io/mistat-code-solutions/IndustrialStatistics/">Python</a>. These notebooks use the piston simulator to cover topics such as statistical process control and statistical design of experiments.</p>
+<p>We refer to the piston simulator to demonstrate the concept of a stochastic emulator — where a model is used, with variability in the inputs — to generate a model of the system variability. Typically, this representation is derived from hyper Latin cube <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adts.202000254">computer experiments</a> and Gaussian process models.</p>
+<p>An essential characteristic of stochastic emulators is that they provide surrogate models of finite element methods (or dynamic computations) adequate for operational digital twins. Investing in digital assets requires a refocus of engineering efforts, from engineering of design to engineering of performance. We believe that this refocussing will characterise engineering science in future years. The webinar provides a glance at the potential performance capabilities.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Adrià Salvador is the Lead Data Scientist at Glovo’s CORE DS team. Ponç Palau is a Data Scientist in the CORE team.</p>
-<p><strong>Keywords:</strong> Supply Chain Management; Language Models; Logistics; Natural Language Processing</p>
+<p><strong>Competing Interest:</strong> Professor Ron Kenett is Senior Research Fellow at the <a href="https://www.neaman.org.il/EN/Home">Samuel Neaman Institute</a>, Technion, Haifa, Israel, Chairman of the <a href="http://www.kpa-group.com/">KPA Group</a>, Israel, Chairman of the Data Science Society at AEAI and Research Professor at the University of Turin, Italy.</p>
+<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
