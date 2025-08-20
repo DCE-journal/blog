@@ -1,5 +1,5 @@
 ---
-title: "Engineering, emulators, digital twins and performance engineering Data-Centric Engineering"
+title: "Engineering, Emulators, Digital Twins and Performance Engineering"
 author: "Ron Kenett "
 date: "2024-02-19"
 categories: [Academic, Seminar]
