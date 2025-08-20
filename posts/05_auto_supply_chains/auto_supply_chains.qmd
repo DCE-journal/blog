@@ -1,8 +1,6 @@
 ---
 title: "Automating Supply Chains: How Heavy is My Shopping?"
-authors:
-    - 'Adrià Salvador'
-    - 'Ponç Palau'
+author: "Adrià Salvador, Ponç Palau"
 date: "2022-10-12"
 categories: [Translational]
 image: "Picture1.jpg"

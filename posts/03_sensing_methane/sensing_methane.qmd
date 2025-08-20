@@ -1,8 +1,6 @@
 ---
-title: "Remote Sensing for Methane: Monitoring and Reducing Greenhouse Gas Emissions"
-authors:
-    - 'Matthew Jones'
-    - 'Philip Jonathan' 
+title: "Remote Sensing for Methane: Monitoring and Reducing Greenhouse Gas Emission"
+author: "Matthew Jones, Philip Jonathan" 
 date: "2022-04-27"
 categories: [Translational, Academic]
 image: "MethanePlumeAlgeria.png"
