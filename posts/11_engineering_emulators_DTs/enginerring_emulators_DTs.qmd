@@ -1,0 +1,34 @@
+---
+title: "Engineering, emulators, digital twins and performance engineering Data-Centric Engineering"
+author: "Ron Kenett "
+date: "2024-02-19"
+categories: [Academic, Seminar]
+image: "priyadharshan-saba-3euV-7cbqxY-unsplash.jpg"
+description: "Prof. Ron Kenett discusses his recent DCE webinar, and how statistical tools can be used to build Digital Twins."
+---
+
+_This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. [Professor Ron Kenett](https://www.neaman.org.il/EN/Ron-Kenett) discusses his recent [DCE webinar](https://youtu.be/zC48sQLjEYQ?si=dkiMgK6hcQkiMe8c), which covers how statistical tools can be used to build Digital Twins in engineering applications._
+
+---
+
+New developments in sensing technologies, big data, storage, and advanced analytics, all affect modern systems engineering. In the most recent DCE webinar, we discuss changes at a conceptual level to consider design optimisation and performance engineering — while aiming for responsive monitoring, diagnostic, prognostic, and prescriptive capabilities. We present a new modelling approach, stochastic emulators, and show how emulators can be used to complement [finite element](https://arxiv.org/abs/1905.06391) and computational fluid dynamic computational models. An organising framework for this conceptual shift is provided by digital twins, introduced through case studies.
+
+![Photo by Priyadharshan Saba on Unsplash](priyadharshan-saba-3euV-7cbqxY-unsplash.jpg)
+
+The first study is based on digital twins of [train locomotives](https://www.nature.com/articles/s41598-023-45204-1). The approach combines individual representations of brake systems, safety valves, and suspension frames. These [digital twins](https://onlinelibrary.wiley.com/doi/abs/10.1002/qre.2948) enable monitoring, diagnostic, prognostic and prescriptive analytics of locomotives, to enhance safe and cost-effective condition-based maintenance. A second, more pedagogical example, is based on a combustion piston simulator that derives cycle time performance, after setting up seven input variables. The piston is introduced and integrated in notebooks offering code in [R](https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903), [JMP](https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903) and [Python](https://gedeck.github.io/mistat-code-solutions/IndustrialStatistics/). These notebooks use the piston simulator to cover topics such as statistical process control and statistical design of experiments.
+
+We refer to the piston simulator to demonstrate the concept of a stochastic emulator — where a model is used, with variability in the inputs — to generate a model of the system variability. Typically, this representation is derived from hyper Latin cube [computer experiments](https://onlinelibrary.wiley.com/doi/abs/10.1002/adts.202000254) and Gaussian process models.
+
+An essential characteristic of stochastic emulators is that they provide surrogate models of finite element methods (or dynamic computations) adequate for operational digital twins. Investing in digital assets requires a refocus of engineering efforts, from engineering of design to engineering of performance. We believe that this refocussing will characterise engineering science in future years. The webinar provides a glance at the potential performance capabilities.
+
+---
+
+**Competing Interest:**
+Professor Ron Kenett is Senior Research Fellow at the [Samuel Neaman Institute](https://www.neaman.org.il/EN/Home), Technion, Haifa, Israel, Chairman of the [KPA Group](http://www.kpa-group.com/), Israel, Chairman of the Data Science Society at AEAI and Research Professor at the University of Turin, Italy.
+
+**Keywords:**
+Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._

@@ -1,0 +1,31 @@
+---
+title: "About"
+subtitle: "Data-Centric Engineering Blog"
+image: images/DCE-bridge-dark.png
+about:
+  template: marquee
+  links:
+    - icon: twitter
+      href: https://x.com/dce_journal
+      text: Twitter
+    - icon: linkedin
+      href: https://uk.linkedin.com/company/data-centric-engineering?trk=public_post_feed-actor-name
+      text: LinkedIn
+
+---
+
+This is the blog for Data-Centric Engineering (cambridge.org/dce), an open-access journal at the interface of engineering and data science. 
+
+#### Editors in chief
+Eleni Chatzi (ETH Zürich), Mark Girolami (University of Cambridge & The Alan Turing Institute), Kenichi Soga (University of California). 
+
+#### Executive editors
+Stéphane Bordas (University of Luxembourg), Roger Ghanem (University of Southern California), Detlef Hohl (Shell), Visakan Kadirkamanathan (University of Sheffield), Youssef Marzouk (Massachusetts Institute of Technology), Omar Matar (Imperial College London), Sumeetpal Singh (University of Cambridge), Kenichi Soga (University of California Berkeley), David White (University of Southampton), Philip J. Withers (University of Manchester).
+
+####
+
+Blog edited by [Lawrence Bull](https://labull.github.io) (University of Glasgow).
+
+---
+
+The views expressed in this blog are those of the listed author, they do not represent the formal view of the DCE team.

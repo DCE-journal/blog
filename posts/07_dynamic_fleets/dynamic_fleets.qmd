@@ -1,0 +1,42 @@
+---
+title: "Managing Fleets Dynamically Will Be Possible, Thanks to Digitalisation"
+author: "Adolfo Crespo del Castillo"
+date: "2023-02-02"
+categories: [Translational]
+image: "talgoHS.png"
+description: "Adolfo Crespo del Castillo discusses the digitalisation of rail fleet asset management."
+---
+
+_This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. [Adolfo Crespo del Castillo](https://www.linkedin.com/in/adolfo-crespo-del-castillo-69a80b17a/) discusses the digitalisation of fleet asset management, suggesting how managing the maintenance of train fleets dynamically will raise efficiency levels and reduce maintenance costs._
+
+---
+
+Asset management and maintenance are entering an era of constant change following the technological advances that constitute digitalisation. The rail sector’s maintenance of infrastructure and moving assets presents both great challenges and business opportunities. The ecosystem is composed of stakeholders including OEMs (Original Equipment Manufacturers), network operators, and third-party companies that share responsibilities along the value chain. This is a discussion of how maintenance strategies for these ecosystems can benefit from digitalisation, with analytics and models that run in real-time, thanks to the data collected from critical systems of operational trains. According to the white paper from McKinsey Digital, [The rail sector’s changing maintenance game](https://www.mckinsey.com/industries/travel-logistics-and-infrastructure/our-insights/the-rail-sectors-changing-maintenance-game), the global maintenance market is currently estimated at 45 to 50 billion per year, with condition-based maintenance and predictive technologies suggesting an efficiency gain of 15–25%. At the end of the day, this could reduce maintenance costs by up to EUR 4 billion for rail operators, up to EUR 2 billion for rolling stock OEMs, and up to EUR 4 billion for third parties.
+
+![Talgo high-speed train fleet, UK](talgoHS.png)
+
+Underpinned by the IoT and smart sensors, new systems place data at the core of asset management processes, allowing the development of powerful decision-making models, supported by (near) real-time and _in-situ_ measurements. In turn, digitalisation requires more sophisticated ways of managing assets, as streaming information must be integrated with engineering knowledge to support complex decision-making dynamically. The data themselves are only the ‘combustible for the motor’.
+
+Following this paradigm shift, companies are developing precise capabilities to detect and predict behaviours or failures in their valuable assets. On the other hand, as [MIT Sloan Business school suggests](https://www.cubility.com.au/wp-content/uploads/2018/11/dup_strategy-not-technology-drives-digital-transformation.pdf), it is _strategy_ and not technology that drives digital transformation. In most cases, when companies try to scale their algorithms to manage multiple assets and link them to other business dimensions, the level of maturity remains low. The rail sector is not an exception to this rule, particularly for locomotives, as maintenance involves numerous restrictions from multiple stakeholders.
+
+# Developing a strategy to manage fleets dynamically
+
+The main challenge when managing fleets is to recognise the opportunities offered by data. Beyond this, any information must be utilised while respecting the existing company structure and systematic activities — a pragmatic and applicable plan must be presented, otherwise, an unconstrained strategy might not consider restrictions: regulations or safety policies, for example. Such an approach is uninformed and naïve when it comes to generating a real impact in modern industrial applications.
+
+Together with maintenance programmes, realistic boundaries need to be defined and classified. In my Doctoral Thesis at the _Institute for Manufacturing_ of the University of Cambridge, a proof of concept was presented in collaboration with Talgo ([Patentes Talgo S.L.U](https://www.talgo.com/)). An essential commitment for Talgo’s Smart Maintenance team was to develop business requirements in view of data availability, the existing condition-based maintenance programmes, and the development of an optimisation model that provides answers to the central planner. These answers should be provided dynamically for everyday operation — allocating trains to operation, maintenance, or staying idle — respecting the existing systematic stoppages opportunistically, to maximise usage and minimise cost. In simple terms, the objective is to scale from single-asset condition management and PHM (Prognostics and Health Management) to the maintenance of fleets dynamically.
+
+# The beginning of an exciting journey
+
+This has been a discussion of the vision of a dynamic and responsive management strategy for valuable fleets, based on data, with humans in the decision-making loop. Firstly, while there are models that provide accurate and local predictions, they are not scaled to the fleet level. Second, there are multiple complexities associated with the fleet level, and there is a lack of solutions since we have not yet scaled our tools for data analysis. A gap must be overcome, likely by a hybrid solution, combining predictive and preventive maintenance approaches. The journey begins here, and there is ample opportunity to start walking.
+
+---
+
+**Competing Interest:**
+Adolfo Crespo del Castillo is a third-year PhD candidate at the University of Cambridge, developing the proof of concept for his thesis with Patentes Talgo S.L.U.
+
+**Keywords:**
+Dynamic Fleet Management; Dynamic Maintenance Management; Asset Management; Digitalisation; Rolling Stock; High-Speed Trains
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._

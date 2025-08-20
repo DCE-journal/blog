@@ -1,0 +1,54 @@
+---
+title: "Materials Informatics: Urgently Needed for a Sustainable Future"
+author: "Hannah Melia"
+date: "2021-12-15"
+categories: [Translational, Paper summary]
+image: "plant.jpg"
+description: "[Hannah Melia](https://uk.linkedin.com/in/hannah-melia-3478a71) (Citrine Informatics) discusses the growing field of Materials Informatics."
+---
+
+_This blog introduces a [peer-reviewed article](https://doi.org/10.1017/dce.2021.19) in the open-access DCE journal. [Hannah Melia](https://uk.linkedin.com/in/hannah-melia-3478a71) ([Citrine Informatics](https://citrine.io/)) discusses the growing field of Materials Informatics, its potential for meeting environmental goals, and the role of open data in accelerating research._
+
+---
+
+The production of materials and chemicals is estimated to cause [around a quarter of greenhouse emissions](https://www.nature.com/articles/s41561-021-00690-8). Moving to biofeedstocks, enabling a circular economy, and increasing the efficiency of material production are all, therefore, important in meeting global carbon-neutral targets. Materials are part of the products we need to help us live more sustainably — contributing to decarbonization of the grid, electromobility, carbon capture, and so on. The development of transformative technologies to mitigate our global environmental and technological challenges will require significant innovation in the design, development, and manufacturing of advanced materials and chemicals.
+
+![](plant.jpg)
+
+Developing new and _qualified_ materials for use in critical applications remains a lengthy process; twenty years from [discovery to market](https://www.mgi.gov/about) is common. To achieve innovations faster than traditional (human) intuition guided methods, we must transition to an informatics paradigm. Synergies between data science, materials science, and artificial intelligence can be leveraged to enable transformative, data-driven discoveries through the use of predictive models and digital twins.
+
+# Materials Informatics
+
+Materials informatics (MI) is a growing field in the materials and chemicals industry. The field applies the principles of informatics to improve the understanding, use, selection, development, and discovery of materials. Common industrial applications include:
+
+- The discovery of new materials that have specific target properties
+
+- Optimisation of the composition or processing parameters of existing materials
+
+- Identification of formulations that simultaneously meet performance, cost, and sustainability criteria
+
+- Identification of the most informative experiments to perform under budgetary requirements or other constraints
+
+You can read case studies from companies such as Panasonic and Showa Denko [here](https://citrine.io/success/case-studies/). However, the broad adoption of MI is hindered by barriers such as skill gaps, cultural resistance, and data sparsity.
+
+# Looking forward
+
+MI software platforms are available and maturing, requiring less expertise in data science to use them; however, a basic understanding of machine learning and data engineering is necessary to make the most of the technology. As ever with software, rubbish in, rubbish out. This means that if researchers in materials and chemicals across industry and academia are to accelerate their investigations, both undergraduate and continuous professional development courses in MI need to be widely available.
+
+The educational process needs to reach those who remain sceptical to the power of MI or those who worry that it will take over their jobs. It is important to emphasize that machine learning is not necessarily a black box and that the domain knowledge of experts is what enables machine learning to be used on small, sparse datasets such as those found in materials and chemicals.
+
+Materials and chemicals datasets are expensive to acquire, with a single data point sometimes taking months and costing tens of thousands of pounds. The resultant information is very context-specific. A research team in the next lab may not be able to interpret and reuse data if the exact testing circumstances are not included in the metadata. In general, the more high-quality data available, the better machine learning models perform. It is important that future datasets are stored according to [FAIR principles](https://www.force11.org/group/fairgroup/fairprinciples), something that can be encouraged by research funding bodies. Just as with the [human genome project](https://www.genome.gov/human-genome-project), access to high-quality data could have a transformative, catalysing effect on materials research.
+
+# The publication in Data-Centric Engineering
+
+The [perspective DCE paper](https://doi.org/10.1017/dce.2021.19) is written with my colleagues Eric Muckley and James Saal. We discuss the importance of materials informatics for accelerating technological innovation, describe current barriers and examples of good practice, and suggest how researchers, funding agencies, and educational institutions can help accelerate the adoption of MI toolsets for science in the 21st century.
+
+---
+
+**Competing Interest:** Hannah Melia is a Product Management Consultant for [Citrine Informatics](https://citrine.io/), a company providing an artificial intelligence platform to accelerate materials and chemicals development.
+
+**Keywords:** Materials; DCE; Open Data; Artificial Intelligence; Sustainability
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._

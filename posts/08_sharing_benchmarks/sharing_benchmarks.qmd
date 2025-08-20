@@ -1,0 +1,65 @@
+---
+title: "Sharing Benchmarks to Improve Maritime Safety"
+author: "Adrian Clifton"
+date: "2023-10-04"
+categories: [Translational]
+image: "christopher-burns-Kj2SaNHG-hg-unsplash.jpg"
+description: "Adrian Clifton (HiLo) explains why data sharing in the maritime industry is critical."
+---
+_This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. [Adrian Clifton](https://www.linkedin.com/in/adrianclifton/?originalSubdomain=uk) ([HiLo](https://www.hilomrm.com/)) explains why data sharing in the maritime industry is critical to accurately predict and prevent high-impact incidents, saving time, money and lives._
+
+---
+
+Business benchmarking involves measuring your organisation’s safety against those of your competitors. It provides critical insights to analyse your current strengths and weaknesses — how to improve them — as well as opportunities and threats within your particular industry, and how you can respond to them.
+
+
+![Photo by Christopher Burns on Unsplash](christopher-burns-Kj2SaNHG-hg-unsplash.jpg)
+
+In fact, benchmarking is a natural, often subconscious process; we perform it every time we make a choice, in order to compare elements that matter most to us, and to allow us to choose the best alternative. While not always accurate, it gives a starting point to assist our final decision. As a simple example, every time we buy something, we compare it against a mental benchmark of different elements to see if it is fit for purpose — a form of pattern recognition. This is often the most important consideration in our final decision to purchase, whether for domestic, leisure or business.
+
+# Why is business benchmarking important?
+
+In order to ensure businesses are maintaining a competitive position within their industry, benchmarking is vital. It allows them to:
+
+- See where they stand in comparison to their competitors.
+
+- Drill down into performance gaps, to see where they are leading and identify areas for improvement.
+
+- Monitor company performance and manage change.
+
+As members of a particularly fast-paced and ever-changing industry, with increasing environmental and safety pressures, it is vital that shipping companies continue to improve their benchmarking. When broken down into individual areas, benchmarking can help improve practices, increase efficiencies and above all drive for safer seas.
+
+# What can go wrong?
+
+There are hundreds of ways to benchmark — some more useful than others. For the most effective benchmarking, however, the data must be complete and accurate. The benchmarking data that has been available previously in the maritime industry is top-level — based on publicly available information. However, it should be no surprise that companies have often been cautious when releasing sensitive internal data, and this is a major problem for shipping companies when trying to build an effective benchmark — the full data is simply not available. As such, 3 major issues need to be resolved:
+
+- Comparisons made with competitors may be inaccurate, as they do not reflect the full picture in terms of data.
+
+- Companies may fail to draw the most valuable insights.
+
+- Worst of all, they may be misled and take the wrong actions. These could be, at best, ineffective; or at worst, counterproductive, meaning reduced safety and efficiency.
+
+# How can you solve these issues?
+
+In response to this, maritime technology company HiLo has produced a safety decision-making system, which _shares the insights_ enabled by collected customer data. Our key focus is to make everyone safer at sea, without penalising our customers, so all of our data is carefully anonymised. In turn, customers can comfortably provide their internal safety data without fear of commercial repercussions. Companies can discover where they truly stand in relation to the industry at large through _big data_ and expert, peer-reviewed analysis. By utilising this effective benchmarking tool, and the accompanying statistical analysis, companies can:
+
+1. See the risks they face.
+
+1. Confirm risk-severity and the priority order for management.
+
+1. Anticipate issues, meaning they can take proactive action before such problems cause a serious safety incident.
+
+All while sharing insights between stakeholders.
+
+---
+
+**Competing Interest:**
+ Adrian Clifton writes for HiLo, a maritime safety decision-support company.
+
+
+**Keywords:**
+Maritime Safety; Marine Risk Management; Decision Support; Technology
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._

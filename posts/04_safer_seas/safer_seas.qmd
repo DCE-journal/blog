@@ -1,0 +1,134 @@
+---
+title: "Working Together for Safer Seas"
+author: "Adrian Clifton"
+date: "2022-06-22"
+categories: [Translational]
+image: "venti-views-1cqIcrWFQBI-unsplash.jpg"
+description: "Adrian Clifton (HiLo) explains why data sharing in the maritime industry is critical."
+---
+
+_This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. [Adrian Clifton](https://www.linkedin.com/in/adrianclifton/?originalSubdomain=uk) ([HiLo](https://www.hilomrm.com/)) explains why data sharing in the maritime industry is critical to accurately predict and prevent high-impact incidents, saving time, money and lives._
+
+---
+
+The world is more connected than ever before, thanks to the Internet and intelligent technology powered by it. From 2010–2016 there were on average 640,000 people online for the first time every day: an extra 27,000 every hour. Things have only accelerated since then, with the growth of mobile 4G and 5G data: between April 2020 and April 2021, more than 330 million more people gained online access.
+
+![Photo by Venti Views on Unsplash](venti-views-1cqIcrWFQBI-unsplash.jpg)
+
+
+# The rise of information sharing worldwide
+
+Not only is access to information growing, but the amount, quality and depth of that data is also increasing. The Internet offers solutions to almost every issue. Almost every possible query has already been asked, and the answer is available at a click of a button.
+
+Information is also available through many different methods, such as:
+
+1. Reading blogs
+
+1. Searching through social channels
+
+1. Watching video-sharing platforms
+
+1. Browsing web pages for specific areas of interest
+
+The growth of connected devices — ‘The Internet of Things’ — means that people don’t even have to search for the answers. This is because machine learning, a form of artificial intelligence (AI) and computer science, can now be used by machines to imitate the way that humans learn through experience.
+
+This allows them to:
+
+1. Improve their future performance without needing new data to be entered manually
+
+1. Solve issues and surpass obstacles by connecting systems that had no way of communicating before
+
+Industries such as aerospace, rail and nuclear energy are prime examples of how this technology benefits organisations. With airlines, for example, this connectivity can:
+
+- Help avoid delays
+- Detect technical issues through machine learning, and predict- where repairs will be needed in the future
+- Quickly source new components when they are needed
+- Make flight routes faster and safer
+
+The knowledge all this data generates creates new opportunities for improvement across every industry. How can mariners and maritime organisations use this immensely powerful data to improve our operations?
+
+# An increasingly connected maritime industry
+
+The marine sector is greatly increasing its use of automation and data sharing. This decreases the need for marine personnel to perform tasks manually, and in turn, reduces human error. This is a crucial safety improvement for the industry. Gathering data through technology is faster, simpler, more accurate and provides future-proofing (as connected equipment learns best practices and improves delivery).
+
+Potential marine safety risks (especially rare ones) have traditionally been very challenging to anticipate. However, if a mariner needing to solve a problem with a piece of shipping equipment has access to connected technology, they can access real-life data and experience to see if anyone else has experienced the same issue; and more importantly how to solve it. Even if they cannot discover the exact solution, they have additional data to help them troubleshoot the problem.
+
+# Sharing is caring for all
+
+Collecting and using this information within your organisation is one thing. However, far greater benefits will be achieved by improving safety and efficiency across the whole industry. In order to achieve this, data must be shared and collated. This greater volume of information provides much more accurate predictions.
+
+Happily, the maritime industry is starting to work more closely together by building relationships, communication and connectivity, in order to make the most of the hugely valuable information resources available. For example, technology can utilise real-life experience from seafarers themselves. Information can be gained, input and shared on how previous fixes have been identified and applied, and how these can be used in the future. By sharing this data, human error can be reduced and solutions can be fed back to prevent incidents in the future.
+
+# The big environmental question
+
+Many different groups within the maritime industry are driving this connectivity. The aim is to achieve industry-wide improvements in key areas including:
+
+- Improving and managing safety
+- Increasing efficiency
+- Perhaps the most important and challenging item on the agenda: environmental impact
+
+A connected industry brings benefits in many areas:
+
+- Improved safety and efficiency of maritime operations for all, due to fewer incidents on the seas
+- Equipment driven by connected technology is less likely to develop faults, meaning industry professionals are freed up to drive businesses forward
+- Saving time and money in these areas allows you to focus on new challenges
+
+Environmental improvements are obviously a very high priority and will only become more so. Industry conversations on how to respond are critical.
+
+Data connectivity can play a huge part by demonstrating the impact of new technologies and techniques such as:
+
+- More efficient fuel types
+- Fuel management optimisation techniques
+- Upgrades of navigation systems to keep ships at sea longer
+- Dual-fuel engines that can use LNG (liquefied natural gas) or marine diesel fuel
+- Future environmentally-friendly fuels when they emerge
+
+# A connected maritime future is a better one
+
+The more knowledge both mariners and their assistive technology have of potential scenarios and how to solve them, the lower the risk of errors when managing them. By continuing to build connectivity and share data within the industry, professionals and organisations can learn from each other to improve life for everyone on the seas — from efficiency to safety to environmental improvements.
+
+The more connected the industry becomes, the safer seafarers will be. The more that high volumes of data from different vessels, scenarios and organisations are shared and analysed in a single place, the more accurately high-impact incidents can be predicted.
+
+# Building a decision-making system for maritime safety
+
+However, this is not at all easy to achieve. Shipping companies have traditionally been very reluctant to share safety data, for both commercial sensitivity and reputational reasons. This means publicly available data for the industry is very limited. As noted above, to make a big data approach effective you need not only a wide variety of data, but a significant amount of it. This is because:
+
+- You need a sufficient volume of data for patterns and trends to emerge and be verifiable
+- The greater amount of data you have, the better chance you have of finding the unusual, unexpected information that can be a critical game-changer for your approach
+
+The answer lies in pulling this data together into a single independent source, and maritime technology company HiLo has done just this. They have created the industry’s first big-data-driven decision-making system, combining info from over 4,000 vessels with world-leading statistical analysis.
+
+The data have been anonymised, therefore ensuring company reputations are protected and providing them with greater encouragement to share it. This has broken the largest barrier to data sharing, demonstrated by the fact that those 4,000 vessels are drawn from more than 55 competing shipping companies, who would never have been comfortable sharing such information previously.
+
+Advantages include:
+
+- The dataset is large in both volume and scope, coming as it does from sources including incident management systems, audits and equipment
+- It can be used to generate expert fleet risk analysis, presented clearly through simple, customised dashboards that highlight the biggest risks
+- Therefore maritime companies can prioritise budget and resources effectively to make the most important safety changes to protect crews and vessels across the seas
+
+# Safety success on the seas
+
+The success of this decision-making system has been outstanding. 2021 figures saw a massive yearly improvement for the companies whose vessels are part of the HiLo fleet. Highlights included:
+
+- £3 million cost reduction from issues prevented or mitigated early
+- 12% reduction in actual/potential high-impact incidents across the fleet
+- 8% reduction in serious injuries to crew members across the fleet
+- 5% reduction in major spills across the fleet
+- 308 fewer actual/potential high-impact incidents for tankers
+- 135 fewer actual/potential high-impact incidents for bulk carriers
+
+# Better together
+
+It can be seen, then, that maritime companies simply cannot make quantum leaps in safety on their own. The amount and range of data from even a large individual organisation in isolation will not compare to what can be achieved together. To protect the industry through its ever-changing challenges, data sharing is critical.
+
+---
+
+**Competing Interest:**
+Adrian Clifton writes for HiLo, a maritime safety decision-support company which works to save time, money, and lives at sea through data analysis.
+
+**Keywords:**
+Maritime Safety; Marine Risk Management; Decision Support; Technology
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._

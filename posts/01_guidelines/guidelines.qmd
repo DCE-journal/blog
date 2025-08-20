@@ -1,0 +1,82 @@
+---
+title: "The DCE Blog: Instructions for Authors"
+description: "These guidelines are based on those provided by the [Data & Policy Blog](https://medium.com/u/9002f5d492c3 (CUP))"
+author: "DCE"
+date: "2021-12-13"
+categories: [Guidelines]
+---
+
+[Updated: Oct-2024]
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA)._
+
+---
+
+The DCE blog is a channel for sharing informed opinions and perspectives relating to research and technology in data-centric engineering.
+Articles should explore the benefits and implications of data science when improving the reliability, safety, and efficiency engineered systems.
+
+Suggested blogs:
+
+- Translational [industry]
+- Research [academic]
+- Tutorial [including `code` examples]
+- Article summaries [publications of DCE journal]
+
+## Author profile
+
+Prospective authors can include practitioners or researchers working at the interface of data science and engineering. Authors can include academics in universities and similar institutions, or professionals engaged with transformative data practices in industry. We actively encourage individuals with diverse backgrounds to propose posts.
+We apply the same authorship principles as the DCE journal. The editor cannot mediate disputes, any changes in authorship will require the approval of all current and proposed authors. Authors should declare any relevant competing interests in their blog. Posts associated with sponsorship will be acknowledged as such.
+We expect all authors to follow the guidelines and recommendations below. To submit a blog for our consideration, please contact us at [dce@cambridge.org](mailto:dce@cambridge.org)
+
+# Guidelines and recommendations
+
+![](thumbnail.jpg)
+
+## Format
+
+We seek to publish pieces between 500 words and 1500 words. If longer, we may consider publication in series, at the editor's discretion. If a blog is based on a published article, the authors should provide a link to the DCE publication.
+
+## Style
+
+The main goal is brevity and focus. 
+Outside of academic and tutorial posts, language should be understood by the general public with interests in new technologies of engineering data-science.
+Technical terms and jargon should be defined when used, ideally avoided if the terminology does not explicitly contribute to the discussion. 
+The author should deal directly with the matter at hand, avoiding long introductions. 
+The text should stand in itself: whilst you can include references, the post should not heavily rely on external sources to be understood.
+
+## Evidence and referencing
+
+There is no need for academic citation styles. Links are sufficient, which should offer access to published works that provide details or examples. It is always better to direct readers to open-access sources. The author can provide links in-text to the editorial team, who will add them to the final publication. Although the citation format is informal, authors should take care to appropriately acknowledge any sources and avoid plagiarism.
+
+## Visual resources
+
+Visual resources (including charts, diagrams and graphs) can be useful to introduce and summarise content. They should be labelled appropriately and connected to the sources of primary or secondary data. The editorial team may add images to blog posts to facilitate reading. Preferably, the author has proper rights of use and access to specific images and seeks to have them included in the publication.
+
+For tutorial and/or academic posts, one can display code,
+
+```python
+def hello_world():
+    print("hello, world!")
+```
+
+equations,
+
+$$
+\ddot{x}+\delta \dot{x}+\alpha x+\beta x^3 = f(t)
+$$
+
+as well as graphs, etc. All the functionality of `qaurto` is available, see the [documentation](https://quarto.org/) for details.
+
+## Editorial input
+
+All posts will be assessed by the DCE editorial team before a decision is made about publication. Our communications editor may suggest changes to authors, including language, sources and structure. If the changes needed are major, we may suggest a different deadline or theme for their consideration.
+Corrections and updates to the blog are at the discretion of the DCE editorial team. Authors will be informed/consulted on any changes. All changes, including removal, will be made transparently.
+
+## Post-publication
+
+The DCE team will encourage the author to promote the published article across their personal social media profiles and any associated institutional accounts - including universities, research groups and others. DCE may write additional material and create graphics or videos to promote the contribution. The blog post might be used across all DCE communication channels: the website, newsletter, and social media.
+
+---
+
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._
+
