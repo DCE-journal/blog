@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/13_net_zero_aviation/aviation_AI.html",
+      "/posts/12_built_environment/built_env.html",
+      "/posts/11_engineering_emulators_DTs/enginerring_emulators_DTs.html",
+      "/posts/10_EI_chatzi/EI_chatzi.html",
+      "/posts/09_world_avatar/world_avatar.html",
+      "/posts/08_sharing_benchmarks/sharing_benchmarks.html",
+      "/posts/07_dynamic_fleets/dynamic_fleets.html",
+      "/posts/06_characterising_extremes/characterising_extremes.html",
+      "/posts/05_auto_supply_chains/auto_supply_chains.html",
+      "/posts/04_safer_seas/safer_seas.html",
+      "/posts/03_sensing_methane/sensing_methane.html",
+      "/posts/02_materials_informatics/materials_informatics.html",
+      "/posts/01_guidelines/guidelines.html"
+    ]
+  }
+]
