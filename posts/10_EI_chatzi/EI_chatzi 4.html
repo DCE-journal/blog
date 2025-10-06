@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Elizabeth Cross, Matthew Jones">
-<meta name="dcterms.date" content="2025-09-15">
-<meta name="description" content="Prof.&nbsp;Elizabeth Cross and Dr.&nbsp;Matthew Jones from the University of Sheffield discuss Gaussian process regression for physics-informed ML">
+<meta name="author" content="Eleni Chatzi">
+<meta name="dcterms.date" content="2023-11-28">
+<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
 
-<title>A Spectrum of Physics-informed Gaussian Processes for Engineering – DCE-blog</title>
+<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -149,16 +120,15 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Spectrum of Physics-informed Gaussian Processes for Engineering</h1>
+      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Elizabeth Cross and Dr.&nbsp;Matthew Jones from the University of Sheffield discuss Gaussian process regression for physics-informed ML
+          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Academic</div>
                 <div class="quarto-category">Editorial</div>
-                <div class="quarto-category">Paper summary</div>
+                <div class="quarto-category">Academic</div>
               </div>
                   </div>
   </div>
@@ -169,14 +139,14 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Elizabeth Cross, Matthew Jones </p>
+               <p>Eleni Chatzi </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 15, 2025</p>
+        <p class="date">November 28, 2023</p>
       </div>
     </div>
     
@@ -195,68 +165,27 @@ window.Quarto = {
 
 
 
-<p><em>This blog introduces a peer-reviewed <a href="https://doi.org/10.1017/dce.2024.2">position paper</a> in the open-access DCE journal. <a href="https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross">Prof.&nbsp;Elizabeth Cross</a> and <a href="https://sheffield.ac.uk/mac/people/research-staff/matthew-jones">Dr.&nbsp;Matthew Jones</a> from the University of Sheffield discuss Gaussian process regression for physics-informed machine learning.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
 <hr>
-<p>Over the course of the last several years, the increasing interest that we are seeing in <em>data-centric engineering</em> has largely stemmed from a growing capacity to acquire data from the physical world around us. Advances in sensing and storage hardware now make it possible for us to collect vast amounts of data in fairly short time periods, allowing us to make use of artificial intelligence (AI), and particularly machine learning (ML), to analyse and predict behaviours of engineering systems.</p>
-<p><img src="world-data-rectangle-c.png" class="img-fluid"></p>
-<p>Despite these advances, there are many cases where AI isn’t ready to be a good engineer right now. Whilst it is true that machine learning has seen us make some remarkable gains, we have very quickly arrived at a new set of problems that we as engineers need to overcome to be able to use the technology well.</p>
-<p>In this article we focus on two significant and interlinked barriers to using ML to its full potential in an engineering context - a lack of data about all behaviours of interest from our critical structures and systems (even if what we do have is “big”), and the inability to use the data we have to make predictions about unmeasured conditions (extrapolation). Add to these challenges the fact that data from the real world are often noisy, corrupted, not direct observations of the behaviours we actually care about, and often contain missing values, you soon start to get the idea that there are many pieces of the puzzle still missing when attempting to characterise our physical world through monitoring data. We think that part of the solution to these problems is to try and build what we know already - some knowledge of physics - into machine learning algorithms, and later we will show how this can help through some examples from structural dynamics.</p>
-<p><img src="missing-data-c.png" class="img-fluid"></p>
-<section id="is-it-a-case-of-physics-vs-data" class="level3">
-<h3 class="anchored" data-anchor-id="is-it-a-case-of-physics-vs-data">Is it a case of physics vs data?</h3>
-<p>You may now be asking yourself, if there are all these limitations with data-driven approaches, why are they interesting to us? Particularly given the wealth of knowledge we have built up as engineers over the last several thousand years. The blunt answer here is that we don’t know everything, and even when we do know enough, modelling multi-physics and multi-scale processes within a changing environment is often very difficult and energy consuming (and have you validated it?). Finally, hopefully you agree that, if possible, we’d like any predictions we make about important systems/structures/infrastructure to take into account evidence of what is happening currently, and for that, observation is needed (data!).</p>
-<p>Given a particular context, there are benefits and disadvantages in taking either a physics or data-based approach; a physics one can provide interpretability, (sometimes) a model with few parameters, and the ability to extrapolate, for example, whereas data-driven approaches can be considered more flexible, may require less user input, and, as we said above, take into account evidence from latest measurements.</p>
-<p>The selected route may come down to personal choice but hopefully is the result of a reasoned argument. One hypothetical approach to this reasoning may be to consider how much of the process of interest can be described by known/modelled physics versus how much of it can be characterised by available data - we can characterise this with the knowledge vs data axes in the figure below. Broadly speaking, in region A one would likely take a physics-based approach and in region C a data-driven one. In the happy green area either may be applicable, and in the bottom left hand corner, one may wish to consider the best route to gain additional knowledge, whether through measurement or otherwise.</p>
-<p><img src="data_vs_physics2.jpg" class="img-fluid" style="width:60.0%"></p>
-<p>Recently interest has been growing in methods that attempt to exploit physics-based models and evidence from data together, hopefully retaining the helpful attributes from both approaches. These methods should be useful for the many engineering problems that fall in region B - the “grey” area. In our work, we consider how to utilise a range of physically-infused<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> models that range across the physics-data spectrum using Gaussian process (GP) regression, a tool for constructing probabilistic machine learning models. We like the GP framework here because of the many routes to building physics into them - our work shows a whole spectrum of them, allowing us to tailor our model according to the level of data and physics that are available (you will have to read the paper if you want to see more than two examples of this though, sorry).</p>
-</section>
-<section id="what-problems-are-we-thinking-about" class="level3">
-<h3 class="anchored" data-anchor-id="what-problems-are-we-thinking-about">What problems are we thinking about?</h3>
-<p>One area where the challenges we were talking about before appear frequently is in the problem of automatically assessing the health of structures from data collection and optimising how we maintain and manage them. Here, we would like to be able to collect and use data to tell us something about the condition of a structure (or multiple ones), as well as how the structure(s) will perform in the future. As a monitoring system comes online, although the data available may be large in size, the information content in it will be limited by the operational conditions seen in the monitoring window (hot, cold, windy, heavily loaded with traffic, etc.), the current condition of the structure and the robustness of the sensing and acquisition system. A data-driven/black-box model established in this setting bears the same limitations and so we need to be careful (and are) about how we expect any such model to generalise to future structural and operational conditions.</p>
-<div id="fig-examples" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-examples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><img src="tamar.jpg" class="img-fluid figure-img"></p>
-<p><img src="Landing.jpg" class="img-fluid figure-img"></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-examples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Some of the structures we would like to be able to monitor in a predictive-based manner
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
 </figure>
 </div>
-</section>
-<section id="less-blathering-more-examples" class="level3">
-<h3 class="anchored" data-anchor-id="less-blathering-more-examples">Less blathering more examples</h3>
-<p>The first example we are going to show here is where we are fairly confident that we know the average (mean) behaviour of the system - we know an equation from physical insight that draws a line through the middle of our data. This is the simplest thing to incorporate into a Gaussian process regression - you can just minus the prediction of the physics model from the measured data and use the GP to model the rest (although there are nicer ways to do it) - we call this including a mean function.</p>
-<p>For our problem here, we are interested in predicting the deck displacement of a stay-cabled bridge, which can then be used as a performance indicator for the structure. The deck displacement is a function of a number of factors, principally traffic loading and temperature. Here a good candidate for our physics component is the (linear) model for how the stay cables expand and contract with temperature.</p>
-<p>The figure here shows two standard GP regressions with and without the prior temperature-driven mean function included. Mimicking the case where data from a full monitoring campaign is only available over a short time window (it happens), the models are trained using data from the first month of the five month period shown. This is a period where we are coming into winter - it’s getting cold as you go along the <span class="math inline">\(x\)</span> axis. The black-box GP - the one without the mean function - (upper figure) is unable to accurately predict the deck displacement as we get further into winter. We wouldn’t expect the black-box to do well here - it hasn’t seen these conditions in the training set - the nice thing with the GP, however, is that it tells you so - the confidence intervals are expanding - and it’s telling you - don’t trust me here. The lower figure shows you what happens if you build that very simple mean function in - the physics holds true in all weathers and gives us a nice base for the GP to make predictions around it. Nice right? The important thing that it really demonstrates is that by building some simple physics in that we trust, and we know will generally hold true, we can lessen our reliance on collecting lots of data in hard to gather places/situations. Are you squinting in suspicion? There is a but coming, though let’s save it for the end.</p>
-<p><img src="tamar_compare_new.png" class="img-fluid"></p>
-<p>Let’s talk about when we know less about the system we are trying to model. The covariance function/kernel of the GP is going to come into play here. A Gaussian process essentially describes a family of functions that could fit to your data and, before we show it any data, the kernel controls what those functions look like - linear, quadratic, smooth, really wiggly (that is the technical scale, honest). Once you’ve shown the GP some data (we call this conditioning), then the functions could look different depending on how flexible the kernel is.</p>
-<p>So back to it, we’ve got some partial knowledge - what we are suggesting here, is that if you know loosely how the bits you understand interact with the bits you don’t know - then design your model to mimic that - combine the physics component and the bit that will learn from the data in the same way.</p>
-<p>Here’s an example. Imagine an aircraft flying in the air (although actually the data we are going to show is (cough) from something that looks like an aeroplane being tested in our lab). We’d like to make a prediction about the fatigue damage accrued in a wing during different manoeuvres - this is so we can schedule inspection/maintenance as and when required rather than at fixed intervals. To do this we are going to create a model that will predict wing response. This is a fun problem because we need to consider both how the wing behaves spatially and temporally.</p>
-<p>In this example, the temporal behaviour is not too far from a linear oscillator (with multiple degrees of freedom) which we can describe with the standard second-order differential equation. If you do enough maths, and assuming you have a random white noise excitation, then you can derive the corresponding covariance function/kernel ready to use as your physics component in the GP. The spatial behaviour is what we are going to assume is unknown (these data are actually from a uniform beam, so we do know it, but imagine it’s a real wing/aerofoil full of spars, with skin, etc.) - we are going to model this with a standard machine learning kernel. Now bringing them together - normally we would model something beam-like as having separable temporal and spatial responses (<span class="math inline">\(Y(t)X(x)\)</span>). We are going to do the same in forming our GP - but with our kernels. We will choose the kernel (<span class="math inline">\(K\)</span>) that is also a separable product between our temporal and spatial behaviour - <span class="math inline">\(K_{physics}K_{data}\)</span>. The results are what you can see below - which are two predictions of wing response at different locations and the prediction of the model - which, as you can see, is doing very well (this is a blog so hand-waving is allowed I assume - look at the paper for the error metrics). This is a situation where a black-box really struggles - the physics-derived kernel in particular allows you to build in/learn the resonance frequencies of the system which generally means you can make predictions with training data at much lower sample rates.</p>
-<p><img src="gartuer-wing-response.png" class="img-fluid"></p>
-</section>
-<section id="important-concluding-statements" class="level3">
-<h3 class="anchored" data-anchor-id="important-concluding-statements">Important concluding statements</h3>
-<p>That might have still been a fair amount of blathering, apologies. The two examples above haven’t quite shown you the full range of how you can build physics into a GP; on a spectrum of lots of physics to very little, we’ve shown you two examples in the middle. In the paper you’ll also see a nice example of building in very simple physical insight (e.g.&nbsp;boundaries, limits) for the situation where you can’t confidently describe/simulate your process (or you don’t have the budget to).</p>
-<p>What both examples here show is that building physical insight into a machine learner can help us lessen reliance on training data - this is important where data are not abundant. Some of the ways of building in physical insight also open the door to making predictions in unseen conditions (see example one). The ability to extrapolate is a big advantage that these models have over taking a standard black-box approach. But (we said there was a but), if you build in physics that you can’t trust, or that won’t be right in some conditions you want to make predictions in, then, of course, you still can’t extrapolate. Obvious, but important to say. For that reason we really advocate building in the simplest physics that you can be confident of into your predictive algorithm. And if, for some conditions, you have neither evidence from data or physics you are certain of, then, what do you have - other than a cool sounding algorithm?</p>
+<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
+<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
+<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
+<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
 <hr>
-<p><strong>Competing Interest:</strong> <a href="https://sheffield.ac.uk/mac/people/research-staff/matthew-jones">Dr.&nbsp;Matthew Jones</a> is a Research Fellow at the University of Sheffield, UK. <a href="https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross">Elizabeth Cross</a> is a Professor and Director of Research and Innovation for the Faculty of Engineering at the University of Sheffield, UK.</p>
-<p><strong>Keywords:</strong> Physics-Informed Machine Learning; Structural Monitoring; Partial domain knowledge; Digital Twins</p>
+<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
+<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
 
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Did you make this up and do we really need another term for hybrid modelling?’ yes we did and no we don’t, this is a blog, don’t take it too seriously please, imagine a nice cup of data tea with some physics stirred in.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -329,7 +258,7 @@ Figure&nbsp;1: Some of the structures we would like to be able to monitor in a p
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/DCE-journal\.github\.io\/blog\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

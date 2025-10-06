@@ -207,7 +207,7 @@ window.Quarto = {
 <p>You may now be asking yourself, if there are all these limitations with data-driven approaches, why are they interesting to us? Particularly given the wealth of knowledge we have built up as engineers over the last several thousand years. The blunt answer here is that we don’t know everything, and even when we do know enough, modelling multi-physics and multi-scale processes within a changing environment is often very difficult and energy consuming (and have you validated it?). Finally, hopefully you agree that, if possible, we’d like any predictions we make about important systems/structures/infrastructure to take into account evidence of what is happening currently, and for that, observation is needed (data!).</p>
 <p>Given a particular context, there are benefits and disadvantages in taking either a physics or data-based approach; a physics one can provide interpretability, (sometimes) a model with few parameters, and the ability to extrapolate, for example, whereas data-driven approaches can be considered more flexible, may require less user input, and, as we said above, take into account evidence from latest measurements.</p>
 <p>The selected route may come down to personal choice but hopefully is the result of a reasoned argument. One hypothetical approach to this reasoning may be to consider how much of the process of interest can be described by known/modelled physics versus how much of it can be characterised by available data - we can characterise this with the knowledge vs data axes in the figure below. Broadly speaking, in region A one would likely take a physics-based approach and in region C a data-driven one. In the happy green area either may be applicable, and in the bottom left hand corner, one may wish to consider the best route to gain additional knowledge, whether through measurement or otherwise.</p>
-<p><img src="data_vs_physics2.jpg" class="img-fluid" style="width:60.0%"></p>
+<p><img src="data_vs_physics2.jpg" class="img-fluid"></p>
 <p>Recently interest has been growing in methods that attempt to exploit physics-based models and evidence from data together, hopefully retaining the helpful attributes from both approaches. These methods should be useful for the many engineering problems that fall in region B - the “grey” area. In our work, we consider how to utilise a range of physically-infused<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> models that range across the physics-data spectrum using Gaussian process (GP) regression, a tool for constructing probabilistic machine learning models. We like the GP framework here because of the many routes to building physics into them - our work shows a whole spectrum of them, allowing us to tailor our model according to the level of data and physics that are available (you will have to read the paper if you want to see more than two examples of this though, sorry).</p>
 </section>
 <section id="what-problems-are-we-thinking-about" class="level3">
@@ -329,7 +329,7 @@ Figure&nbsp;1: Some of the structures we would like to be able to monitor in a p
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/DCE-journal\.github\.io\/blog\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
