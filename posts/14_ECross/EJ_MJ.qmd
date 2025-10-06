@@ -37,7 +37,7 @@ One hypothetical approach to this reasoning may be to consider how much of the p
 Broadly speaking, in region A one would likely take a physics-based approach and in region C a data-driven one. 
 In the happy green area either may be applicable, and in the bottom left hand corner, one may wish to consider the best route to gain additional knowledge, whether through measurement or otherwise.
 
-![](data_vs_physics2.jpg)
+![](data_vs_physics2.jpg){width=60%}
 
 Recently interest has been growing in methods that attempt to exploit physics-based models and evidence from data together, hopefully retaining the helpful attributes from both approaches. 
 These methods should be useful for the many engineering problems that fall in region B - the "grey" area. 
