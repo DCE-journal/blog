@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Ron Kenett">
+<meta name="dcterms.date" content="2024-02-19">
+<meta name="description" content="Prof.&nbsp;Ron Kenett discusses his recent DCE webinar, and how statistical tools can be used to build Digital Twins.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>Engineering, emulators, digital twins and performance engineering Data-Centric Engineering – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,15 +120,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">Engineering, emulators, digital twins and performance engineering Data-Centric Engineering</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Prof.&nbsp;Ron Kenett discusses his recent DCE webinar, and how statistical tools can be used to build Digital Twins.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
                 <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Seminar</div>
               </div>
                   </div>
   </div>
@@ -139,14 +139,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Ron Kenett </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">February 19, 2024</p>
       </div>
     </div>
     
@@ -165,20 +165,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.neaman.org.il/EN/Ron-Kenett">Professor Ron Kenett</a> discusses his recent <a href="https://youtu.be/zC48sQLjEYQ?si=dkiMgK6hcQkiMe8c">DCE webinar</a>, which covers how statistical tools can be used to build Digital Twins in engineering applications.</em></p>
 <hr>
+<p>New developments in sensing technologies, big data, storage, and advanced analytics, all affect modern systems engineering. In the most recent DCE webinar, we discuss changes at a conceptual level to consider design optimisation and performance engineering — while aiming for responsive monitoring, diagnostic, prognostic, and prescriptive capabilities. We present a new modelling approach, stochastic emulators, and show how emulators can be used to complement <a href="https://arxiv.org/abs/1905.06391">finite element</a> and computational fluid dynamic computational models. An organising framework for this conceptual shift is provided by digital twins, introduced through case studies.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="priyadharshan-saba-3euV-7cbqxY-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Priyadharshan Saba on Unsplash</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>The first study is based on digital twins of <a href="https://www.nature.com/articles/s41598-023-45204-1">train locomotives</a>. The approach combines individual representations of brake systems, safety valves, and suspension frames. These <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/qre.2948">digital twins</a> enable monitoring, diagnostic, prognostic and prescriptive analytics of locomotives, to enhance safe and cost-effective condition-based maintenance. A second, more pedagogical example, is based on a combustion piston simulator that derives cycle time performance, after setting up seven input variables. The piston is introduced and integrated in notebooks offering code in <a href="https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903">R</a>, <a href="https://www.wiley.com/en-gb/Modern+Industrial+Statistics%3A+With+Applications+in+R%2C+MINITAB%2C+and+JMP%2C+3rd+Edition-p-9781119714903">JMP</a> and <a href="https://gedeck.github.io/mistat-code-solutions/IndustrialStatistics/">Python</a>. These notebooks use the piston simulator to cover topics such as statistical process control and statistical design of experiments.</p>
+<p>We refer to the piston simulator to demonstrate the concept of a stochastic emulator — where a model is used, with variability in the inputs — to generate a model of the system variability. Typically, this representation is derived from hyper Latin cube <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/adts.202000254">computer experiments</a> and Gaussian process models.</p>
+<p>An essential characteristic of stochastic emulators is that they provide surrogate models of finite element methods (or dynamic computations) adequate for operational digital twins. Investing in digital assets requires a refocus of engineering efforts, from engineering of design to engineering of performance. We believe that this refocussing will characterise engineering science in future years. The webinar provides a glance at the potential performance capabilities.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
+<p><strong>Competing Interest:</strong> Professor Ron Kenett is Senior Research Fellow at the <a href="https://www.neaman.org.il/EN/Home">Samuel Neaman Institute</a>, Technion, Haifa, Israel, Chairman of the <a href="http://www.kpa-group.com/">KPA Group</a>, Israel, Chairman of the Data Science Society at AEAI and Research Professor at the University of Turin, Italy.</p>
 <p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>

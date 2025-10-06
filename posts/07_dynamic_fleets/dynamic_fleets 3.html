@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Adolfo Crespo del Castillo">
+<meta name="dcterms.date" content="2023-02-02">
+<meta name="description" content="Adolfo Crespo del Castillo discusses the digitalisation of rail fleet asset management.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>Managing Fleets Dynamically Will Be Possible, Thanks to Digitalisation – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,15 +120,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">Managing Fleets Dynamically Will Be Possible, Thanks to Digitalisation</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Adolfo Crespo del Castillo discusses the digitalisation of rail fleet asset management.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
-                <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Translational</div>
               </div>
                   </div>
   </div>
@@ -139,14 +138,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Adolfo Crespo del Castillo </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">February 2, 2023</p>
       </div>
     </div>
     
@@ -165,25 +164,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.linkedin.com/in/adolfo-crespo-del-castillo-69a80b17a/">Adolfo Crespo del Castillo</a> discusses the digitalisation of fleet asset management, suggesting how managing the maintenance of train fleets dynamically will raise efficiency levels and reduce maintenance costs.</em></p>
 <hr>
+<p>Asset management and maintenance are entering an era of constant change following the technological advances that constitute digitalisation. The rail sector’s maintenance of infrastructure and moving assets presents both great challenges and business opportunities. The ecosystem is composed of stakeholders including OEMs (Original Equipment Manufacturers), network operators, and third-party companies that share responsibilities along the value chain. This is a discussion of how maintenance strategies for these ecosystems can benefit from digitalisation, with analytics and models that run in real-time, thanks to the data collected from critical systems of operational trains. According to the white paper from McKinsey Digital, <a href="https://www.mckinsey.com/industries/travel-logistics-and-infrastructure/our-insights/the-rail-sectors-changing-maintenance-game">The rail sector’s changing maintenance game</a>, the global maintenance market is currently estimated at 45 to 50 billion per year, with condition-based maintenance and predictive technologies suggesting an efficiency gain of 15–25%. At the end of the day, this could reduce maintenance costs by up to EUR 4 billion for rail operators, up to EUR 2 billion for rolling stock OEMs, and up to EUR 4 billion for third parties.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="talgoHS.png" class="img-fluid figure-img"></p>
+<figcaption>Talgo high-speed train fleet, UK</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>Underpinned by the IoT and smart sensors, new systems place data at the core of asset management processes, allowing the development of powerful decision-making models, supported by (near) real-time and <em>in-situ</em> measurements. In turn, digitalisation requires more sophisticated ways of managing assets, as streaming information must be integrated with engineering knowledge to support complex decision-making dynamically. The data themselves are only the ‘combustible for the motor’.</p>
+<p>Following this paradigm shift, companies are developing precise capabilities to detect and predict behaviours or failures in their valuable assets. On the other hand, as <a href="https://www.cubility.com.au/wp-content/uploads/2018/11/dup_strategy-not-technology-drives-digital-transformation.pdf">MIT Sloan Business school suggests</a>, it is <em>strategy</em> and not technology that drives digital transformation. In most cases, when companies try to scale their algorithms to manage multiple assets and link them to other business dimensions, the level of maturity remains low. The rail sector is not an exception to this rule, particularly for locomotives, as maintenance involves numerous restrictions from multiple stakeholders.</p>
+<section id="developing-a-strategy-to-manage-fleets-dynamically" class="level1">
+<h1>Developing a strategy to manage fleets dynamically</h1>
+<p>The main challenge when managing fleets is to recognise the opportunities offered by data. Beyond this, any information must be utilised while respecting the existing company structure and systematic activities — a pragmatic and applicable plan must be presented, otherwise, an unconstrained strategy might not consider restrictions: regulations or safety policies, for example. Such an approach is uninformed and naïve when it comes to generating a real impact in modern industrial applications.</p>
+<p>Together with maintenance programmes, realistic boundaries need to be defined and classified. In my Doctoral Thesis at the <em>Institute for Manufacturing</em> of the University of Cambridge, a proof of concept was presented in collaboration with Talgo (<a href="https://www.talgo.com/">Patentes Talgo S.L.U</a>). An essential commitment for Talgo’s Smart Maintenance team was to develop business requirements in view of data availability, the existing condition-based maintenance programmes, and the development of an optimisation model that provides answers to the central planner. These answers should be provided dynamically for everyday operation — allocating trains to operation, maintenance, or staying idle — respecting the existing systematic stoppages opportunistically, to maximise usage and minimise cost. In simple terms, the objective is to scale from single-asset condition management and PHM (Prognostics and Health Management) to the maintenance of fleets dynamically.</p>
+</section>
+<section id="the-beginning-of-an-exciting-journey" class="level1">
+<h1>The beginning of an exciting journey</h1>
+<p>This has been a discussion of the vision of a dynamic and responsive management strategy for valuable fleets, based on data, with humans in the decision-making loop. Firstly, while there are models that provide accurate and local predictions, they are not scaled to the fleet level. Second, there are multiple complexities associated with the fleet level, and there is a lack of solutions since we have not yet scaled our tools for data analysis. A gap must be overcome, likely by a hybrid solution, combining predictive and preventive maintenance approaches. The journey begins here, and there is ample opportunity to start walking.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
-<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
+<p><strong>Competing Interest:</strong> Adolfo Crespo del Castillo is a third-year PhD candidate at the University of Cambridge, developing the proof of concept for his thesis with Patentes Talgo S.L.U.</p>
+<p><strong>Keywords:</strong> Dynamic Fleet Management; Dynamic Maintenance Management; Asset Management; Digitalisation; Rolling Stock; High-Speed Trains</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Markus Kraft">
+<meta name="dcterms.date" content="2023-11-13">
+<meta name="description" content="Prof.&nbsp;Markus Kraft discusses work towards human-in-the-loop modelling at scale.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>The World Avatar: Revolutionising Human-in-the-Loop – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,14 +120,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">The World Avatar: Revolutionising Human-in-the-Loop</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Prof.&nbsp;Markus Kraft discusses work towards human-in-the-loop modelling at scale.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
                 <div class="quarto-category">Academic</div>
               </div>
                   </div>
@@ -139,14 +138,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Markus Kraft </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">November 13, 2023</p>
       </div>
     </div>
     
@@ -165,21 +164,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.ceb.cam.ac.uk/directory/markus-kraft">Prof.&nbsp;Markus Kraft</a> discusses work towards human-in-the-loop modelling at scale, conducted via the <a href="https://www.cares.cam.ac.uk/">Centre for Advanced Research and Education in Singapore</a>.</em></p>
 <hr>
+<p>Human-in-the-loop models represent the interaction between humans and automated systems, where human input is needed to operate, train, or improve a system. In these models, humans are integrated into the workflow of an automated process as both the goal-setter and goal-executor.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="aleksandr-popov-aW50su5Dwek-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Aleksandr Popov on Unsplash</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>As a simple example, the task of baking a cake can be described as a human-in-the-loop system, where the human asks the <strong>why</strong> (the goal) and the <strong>how</strong> (the method). The <strong>why</strong> is broken into subgoals in the recipe, which the human can read and understand, such as: <em>beat the eggs</em>, <em>weigh the flour</em>, and <em>turn on the oven</em>. The human then carries out the <strong>how</strong> of these tasks using the correct tools: whisks, weighing scales, oven, etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="hitl.webp" class="img-fluid figure-img"></p>
+<figcaption>A conventional human-in-the-loop system</figcaption>
+</figure>
+</div>
+<p>More complex human-in-the-loop systems are prevalent across various industries, integrating human intelligence and decision-making with automated processes. From drug discovery and material science to robotic surgery and autonomous vehicles, human-in-the-loop systems harness the strengths of both humans and machines across diverse applications.</p>
+<p>What these applications lack is a consistent knowledge model. The data lacks context. What is understandable to a human is incomprehensible to a machine. For example, the word “bank” can refer to a financial institution or the side of a river, and without semantic context, a machine cannot determine the correct meaning based on its usage. This is a fundamental barrier to the development of intelligent automation and AI systems.</p>
+<p><a href="https://theworldavatar.io/">The World Avatar project</a> introduces a common framework for data representation, ensuring that information is interpretable, interconnected, and meaningful across different contexts and applications. This not only enhances the ability of machines to understand and work with human-generated data but also empowers humans to interact with machines in more intuitive and productive ways.</p>
+<p>The project uses ontologies to represent any data or information in a logical knowledge graph. It uses semantic web technologies distributed over the internet to interact with any software and hardware. The entire ecosystem is dynamic, so new information is automatically cascaded through the entire knowledge graph. This revolutionary approach can autonomously determine the <strong>how</strong> for any given <strong>why</strong>.</p>
+<p>So, what does this mean? Essentially, the World Avatar can derive information and <em>knows</em> how to solve problems. Given enough information, such a system would know exactly how to create new drugs, build a smart city, or reduce carbon emissions across entire industries. It could be applied to the world’s most complex and interconnected problems.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="hitl_2.webp" class="img-fluid figure-img"></p>
+<figcaption>The World Avatar-enabled human-in-the-loop system</figcaption>
+</figure>
+</div>
+<p>The World Avatar does not eliminate the human element; instead, it enhances and refines our role in the process. Humans remain integral, continuing to set overarching goals and participating actively in the execution of tasks. However, how we engage with the system and contribute to the workflow undergoes a transformative change.</p>
+<p>In the World Avatar-enabled human-in-the-loop model, humans retain their position as goal-setters. We define the <strong>why</strong>, articulating our objectives and aspirations. This is a critical function, as it ensures that the system’s actions are aligned with our values, preferences, and desired outcomes.</p>
+<p>Once the goals are set, the World Avatar takes the reins, navigating the complexities of the <strong>how</strong>. It draws from a wealth of interconnected knowledge (from quantum calculations to nationwide simulations) and breaks down the overarching objectives into sub-goals, creating a roadmap for execution.</p>
+<p>What’s more, findings from the World Avatar can be used to control real-world processes. <a href="https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-314.pdf">Our recent case study</a> used cutting-edge laboratory equipment to control automated experiments via the results of simulations populated by data from and executed within, the World Avatar.</p>
+<p>The World Avatar is ready to redefine human-in-the-loop systems, ushering in a new era of intelligent automation and human-machine collaboration. By seamlessly integrating vast repositories of knowledge through dynamic knowledge graphs and ontologies, the World Avatar transcends the traditional boundaries of automated systems, offering unparalleled ways to solve problems and make decisions.</p>
+<p>To learn more about the World Avatar, watch the associated <a href="https://www.youtube.com/watch?v=vIAL0Ly6VT4">DCE webinar on YouTube</a>.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
-<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
+<p><strong>Competing Interest:</strong> Prof.&nbsp;Markus Kraft is a Fellow of Churchill College Cambridge and Professor in the Department of Chemical Engineering and Biotechnology. He is the director of CARES ltd., the Singapore-Cambridge CREATE Research Centre.</p>
+<p><strong>Keywords:</strong> Dynamic Knowledge Graphs; Digital Twin Technology; Semantic Web; System of Systems; Automated Decision-Making; Human-AI Collaboration</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 

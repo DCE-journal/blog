@@ -6,11 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Matthew Jones">
+<meta name="author" content="Philip Jonathan">
+<meta name="dcterms.date" content="2022-11-25">
+<meta name="description" content="Matthew Jones and Philip Jonathan (Shell, Lancaster University) introduce ideas from extreme value statistics in weather modelling and oceanography.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>Characterising Extreme Environments – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,15 +121,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">Characterising Extreme Environments</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Matthew Jones and Philip Jonathan (Shell, Lancaster University) introduce ideas from extreme value statistics in weather modelling and oceanography.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
                 <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Translational</div>
               </div>
                   </div>
   </div>
@@ -137,16 +138,17 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Authors</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Matthew Jones </p>
+               <p>Philip Jonathan </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">November 25, 2022</p>
       </div>
     </div>
     
@@ -165,21 +167,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. Matthew Jones (<a href="https://www.shell.com/">Shell</a>) and <a href="https://www.linkedin.com/in/philip-jonathan-81b3a59/?originalSubdomain=uk">Philip Jonathan</a> (<a href="https://www.shell.com/">Shell</a>, <a href="https://www.lancaster.ac.uk/maths/people/philip-jonathan">Lancaster University</a>) introduce ideas from extreme value statistics and discuss practical challenges related to their publications in weather modelling and oceanography.</em></p>
 <hr>
+<p>Quantifying the probability that a system (like a coastal defence, or a stock market) will fail, over some period of operation, often critically depends on models of extreme (or rare) events, to which the system is exposed. If we understand the extremes, we can design the system with sufficient reliability. This post introduces extreme value modelling and outlines some practical challenges. We also provide links to recent contributions by the authors.</p>
+<p>A typical prediction problem in data science involves trying to estimate what we expect to happen in situations we haven’t yet observed, and maybe quantify the uncertainty of a prediction. Usually, we are trying, in some sense, to interpolate between situations we think we understand (maybe because we have observations) and intermediate situations for which predictions are needed. Modelling extremes presents a different kind of challenge. Now we might want to predict the magnitudes of very rare events, which are likely never to have been seen before. In this sense, we need to extrapolate. The central limit theorem tells us that the distribution of parameter estimates in an empirical predictive model often tends to a Gaussian distribution as the number of observations increases. This allows us to quantify the uncertainty of predictions. When modelling extremes, there are similar asymptotic theorems describing the distribution of maxima of random variables (over a large spatial or temporal interval, say) and the distribution of exceedances of a high threshold. These theorems provide a basis for fitting the tails of distributions of individual system output variables.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="TropicalAtlanticStormsNOAA.jpg" class="img-fluid figure-img"></p>
+<figcaption>Satellite image of storms and hurricanes in the tropical Atlantic (courtesy of NOAA)</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>In practice, estimating extremes is complicated by many effects. We sometimes want to describe the tails of multivariate distributions, where some variables might be extreme, and other variables not. We might be interested in modelling extremes in space, or in time. In all these cases, specifying a model for the joint behaviour of random variables with appropriate asymptotic characteristics is important. Extremes from our physical environment (like atmospheric pressure fields, ocean waves, rainfall, river levels, earthquakes and heatwaves) typically depend on covariates: so the tail of the wind speed distribution might depend on the characteristics of the pressure field generating it (see the Figure) and the relative position of the observation location. This means we have to allow model parameters to vary with such covariates.</p>
+<p>There is an active community of “extremist” (!) researchers in statistics and applied disciplines, both in academia and industry. Researchers at Shell have developed efficient computational methods to estimate non-stationary <a href="https://arxiv.org/abs/1807.10542">marginal</a>, conditional, <a href="https://arxiv.org/abs/2201.10451v1">spatial</a> and <a href="https://onlinelibrary.wiley.com/doi/10.1002/env.2541">time-series</a> extremes, often facilitated by long-standing collaborative projects with universities such as Lancaster. The holy grail in risk assessment is to be able to characterise and quantify all sources of <a href="https://doi.org/10.1016/j.coastaleng.2018.07.002">uncertainty</a>, including data measured with error, and approximate or misspecified models, so that system design and operational decisions are made as well as possible.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
-<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
+<p><strong>Competing Interest:</strong> Matthew Jones is a Statistician at Shell; Philip Jonathan is Chief Statistician at Shell, and Chair of Environmental Statistics and Data Science at Lancaster University.</p>
+<p><strong>Keywords:</strong> Oceanography; Extreme Value Statistics; Sustainability</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Adrian Clifton">
+<meta name="dcterms.date" content="2023-10-04">
+<meta name="description" content="Adrian Clifton (HiLo) explains why data sharing in the maritime industry is critical.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>Sharing Benchmarks to Improve Maritime Safety – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,15 +120,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">Sharing Benchmarks to Improve Maritime Safety</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Adrian Clifton (HiLo) explains why data sharing in the maritime industry is critical.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
-                <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Translational</div>
               </div>
                   </div>
   </div>
@@ -139,14 +138,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Adrian Clifton </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">October 4, 2023</p>
       </div>
     </div>
     
@@ -165,25 +164,52 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.linkedin.com/in/adrianclifton/?originalSubdomain=uk">Adrian Clifton</a> (<a href="https://www.hilomrm.com/">HiLo</a>) explains why data sharing in the maritime industry is critical to accurately predict and prevent high-impact incidents, saving time, money and lives.</em></p>
 <hr>
+<p>Business benchmarking involves measuring your organisation’s safety against those of your competitors. It provides critical insights to analyse your current strengths and weaknesses — how to improve them — as well as opportunities and threats within your particular industry, and how you can respond to them.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="christopher-burns-Kj2SaNHG-hg-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Christopher Burns on Unsplash</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>In fact, benchmarking is a natural, often subconscious process; we perform it every time we make a choice, in order to compare elements that matter most to us, and to allow us to choose the best alternative. While not always accurate, it gives a starting point to assist our final decision. As a simple example, every time we buy something, we compare it against a mental benchmark of different elements to see if it is fit for purpose — a form of pattern recognition. This is often the most important consideration in our final decision to purchase, whether for domestic, leisure or business.</p>
+<section id="why-is-business-benchmarking-important" class="level1">
+<h1>Why is business benchmarking important?</h1>
+<p>In order to ensure businesses are maintaining a competitive position within their industry, benchmarking is vital. It allows them to:</p>
+<ul>
+<li><p>See where they stand in comparison to their competitors.</p></li>
+<li><p>Drill down into performance gaps, to see where they are leading and identify areas for improvement.</p></li>
+<li><p>Monitor company performance and manage change.</p></li>
+</ul>
+<p>As members of a particularly fast-paced and ever-changing industry, with increasing environmental and safety pressures, it is vital that shipping companies continue to improve their benchmarking. When broken down into individual areas, benchmarking can help improve practices, increase efficiencies and above all drive for safer seas.</p>
+</section>
+<section id="what-can-go-wrong" class="level1">
+<h1>What can go wrong?</h1>
+<p>There are hundreds of ways to benchmark — some more useful than others. For the most effective benchmarking, however, the data must be complete and accurate. The benchmarking data that has been available previously in the maritime industry is top-level — based on publicly available information. However, it should be no surprise that companies have often been cautious when releasing sensitive internal data, and this is a major problem for shipping companies when trying to build an effective benchmark — the full data is simply not available. As such, 3 major issues need to be resolved:</p>
+<ul>
+<li><p>Comparisons made with competitors may be inaccurate, as they do not reflect the full picture in terms of data.</p></li>
+<li><p>Companies may fail to draw the most valuable insights.</p></li>
+<li><p>Worst of all, they may be misled and take the wrong actions. These could be, at best, ineffective; or at worst, counterproductive, meaning reduced safety and efficiency.</p></li>
+</ul>
+</section>
+<section id="how-can-you-solve-these-issues" class="level1">
+<h1>How can you solve these issues?</h1>
+<p>In response to this, maritime technology company HiLo has produced a safety decision-making system, which <em>shares the insights</em> enabled by collected customer data. Our key focus is to make everyone safer at sea, without penalising our customers, so all of our data is carefully anonymised. In turn, customers can comfortably provide their internal safety data without fear of commercial repercussions. Companies can discover where they truly stand in relation to the industry at large through <em>big data</em> and expert, peer-reviewed analysis. By utilising this effective benchmarking tool, and the accompanying statistical analysis, companies can:</p>
+<ol type="1">
+<li><p>See the risks they face.</p></li>
+<li><p>Confirm risk-severity and the priority order for management.</p></li>
+<li><p>Anticipate issues, meaning they can take proactive action before such problems cause a serious safety incident.</p></li>
+</ol>
+<p>All while sharing insights between stakeholders.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
-<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
+<p><strong>Competing Interest:</strong> Adrian Clifton writes for HiLo, a maritime safety decision-support company.</p>
+<p><strong>Keywords:</strong> Maritime Safety; Marine Risk Management; Decision Support; Technology</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eleni Chatzi">
-<meta name="dcterms.date" content="2023-11-28">
-<meta name="description" content="Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.">
+<meta name="author" content="Ramaseshan Kannan">
+<meta name="dcterms.date" content="2024-04-09">
+<meta name="description" content="Dr Ramaseshan Kannan discusses how, despite first appearances, the built environment requires Data-Centric Engineering.">
 
-<title>Editor’s Insights: Data-Centric Engineering of Monitored Systems – DCE-blog</title>
+<title>Why the Built Environment Needs Innovations in Data-Centric Engineering – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,15 +120,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Editor’s Insights: Data-Centric Engineering of Monitored Systems</h1>
+      <h1 class="title">Why the Built Environment Needs Innovations in Data-Centric Engineering</h1>
                   <div>
         <div class="description">
-          Prof.&nbsp;Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking.
+          Dr Ramaseshan Kannan discusses how, despite first appearances, the built environment requires Data-Centric Engineering.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Editorial</div>
                 <div class="quarto-category">Academic</div>
+                <div class="quarto-category">Translational</div>
               </div>
                   </div>
   </div>
@@ -139,14 +139,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Eleni Chatzi </p>
+               <p>Ramaseshan Kannan </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 28, 2023</p>
+        <p class="date">April 9, 2024</p>
       </div>
     </div>
     
@@ -165,21 +165,55 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. The DCE journal co-editor-in-chief <a href="https://baug.ethz.ch/en/department/people/professors/personen-detail.MTc1MDE1.TGlzdC8xOTA4LDE1NjE3MjkzNDM=.html">Prof.&nbsp;Eleni Chatzi</a> (Chair of Structural Mechanics at ETH Zürich) discusses emerging themes of physics-informed machine learning, digital twins, and systems thinking.</em></p>
+<p><em>This blog offers informed opinions and perspectives relating to nascent technologies in data-centric engineering. <a href="https://www.linkedin.com/in/ramaseshankannan/">Dr Ramaseshan Kannan</a> (Head of Computational Science at Arup) discusses how, despite first appearances, the built environment requires rapid developments in Data-Centric Engineering.</em></p>
 <hr>
+<p>It is no secret that the built environment faces enormous challenges globally and from a planetary perspective. On the one hand, the sector is responsible for up to 40% of all carbon emissions; on the other, there is increased demand on our built infrastructure — from rapid urbanisation and natural calamities such as earthquakes, floods, or hurricanes. In turn, there is a two-pronged challenge of decarbonisation and resilience. It is here that Data-Centric Engineering — which I see as an interdisciplinary field including computational science, data science, computational statistics, optimisation, engineering and more — will have a crucial role to play.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="michael-dziedzic-kMgwpYA4orI-unsplash.jpg" class="img-fluid figure-img"></p>
-<figcaption>Photo by Michael Dziedzic on Unsplash</figcaption>
+<p><img src="rama-image.png" class="img-fluid figure-img"></p>
+<figcaption>Credit: Arup</figcaption>
 </figure>
 </div>
-<p>Over past 17 years, and in my current capacity as Chair of <a href="https://chatzi.ibk.ethz.ch/">Structural Mechanics &amp; Monitoring at ETH Zurich</a>, I have been working on the coupling of data with models that are driven from first principles (physics, mechanics, dynamics) to efficiently track and simulate monitored systems. Today, data seems omnipresent and abundant, as it is possible to extract from diverse products, processes, and structures. In the domain of Structural Health Monitoring (SHM), data of various forms can be obtained from sensors that can be deployed (via attachment, mobile sensing or remotely) on structures or mechanical systems. Contrary to popular belief, such systems are, in fact, like living, breathing organisms, which experience motion, and injury — they are exposed to adverse loads and natural hazards, age and deteriorate. Damage to such systems, which form our critical infrastructure and transportation networks, implies economic loss and impairment of our mobility and societal structures. In isolated cases, structures that fail can cost human lives. With a view to safeguard and protect structures and engineered systems, SHM essentially proposes a chain-like architecture, with the first link pertaining to data collection. However, data alone is not enough. Engineering models offer the opportunity to complement our observations by seeding in positive inductive biases, which allow us to filter raw data into interpretable and explainable information. Such models typically rely on principles of mechanics and dynamics. Oftentimes, these even come in the form of empirical laws.</p>
-<p><img src="IOP_Physics_CHATZI.png" class="img-fluid"></p>
-<p>The fusion of data with physics-based models is often referred to as hybrid modelling, and it allows us to create virtualisations or <a href="https://www.cambridge.org/core/journals/data-centric-engineering/digital-twin-collection">Digital Twins</a> of engineered systems. Hybrid models often rely on Machine Learning (ML) schemes to model the portion of the physics that remains unknown, in which case, the term <a href="https://arxiv.org/abs/2310.20425">physics-enhanced model</a> can be used. The balancing of physics involved with the amount of data available prescribes, in essence, a spectrum of possible schemes, which can rely more or less on the underlying physics-based assumptions (covering a white-to-grey-to-black box range). The information generated from such a merger can then be fed into the third link of the SHM chain, which corresponds to the task of diagnosis and prognosis, concerning the performance of these systems. In the very final link, the intention is to capitalise on the knowledge gained from the finite set of monitored instances, to support decisions and management at the systems level. For instance, the set of bridges and tunnels across a roadway network, the wind turbines within a farm, or the portfolio of offshore farms in the North Sea.</p>
-<p>In a way, this chain is a natural parallel of the umbrella concept that is <em>data science</em>, since, at its core lie the concepts of data, computing, and algorithms to enable cognitive tasks. I am thrilled to have joined the DCE team as a co-editor-in-chief. I share its mission to explore the benefits of data science to improve the reliability, resilience, safety, and usability of engineered systems, and to promote autonomy and self-awareness in our engineered world.</p>
+<p>The built environment is often seen as a field that doesn’t <em>need</em> to be on the cutting edge of science. But this misperception couldn’t be farther from reality! There is a variety of complex problems that need a range of computational techniques to be solved. A number of these are unsolved problems or might be on the research frontier at low <em>Technology Readiness Levels</em>. As such the techniques are effectively non-existent or unavailable to the industry. On their part, research funding bodies and industry must realise these are not Instagram-style problems — rather they need ‘<a href="https://en.wikipedia.org/wiki/Deep_tech">deep tech</a>’ innovation and investment.</p>
+<p>So, what kinds of AI and science does the built environment need to tackle emerging challenges? Through the lens of my work at <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;opi=89978449&amp;url=https%3A%2F%2Fwww.arup.com%2F&amp;ved=2ahUKEwjc7K6VpaaFAxVxRkEAHfhkA4AQFnoECAcQAQ&amp;usg=AOvVaw17uofZFjLGxT1N9dquYCWN">Arup</a> and our collaborators from academia and industry, here are a few examples.</p>
+<p>In each case, I present a set of broad problems in the application domain, and hypothesise an (incomplete!) set of innovations we might need to leverage.</p>
+<p><strong>We have ageing assets whose design, condition or degradation are undetermined. Our products are prototypes that are prone to highly adverse consequences of ‘getting it wrong’.</strong></p>
+<ul>
+<li><p>Scientific problems: new ways to blend physics and data; new techniques to predict and prognose; alternative ways to reconstruct system behaviour from noisy, disparate data sources; techniques to simulate and understand physical behaviour — especially in safety-critical scenarios.</p></li>
+<li><p>Innovations: new forms of uncertainty quantification; scientific machine learning; statistics; computational mechanics; novel material models; multi-modal learning.</p></li>
+</ul>
+<p><strong>We want to prototype designs faster to aid a better exploration of design space — especially in the early stages of a project ­ — to reduce embodied carbon by using materials more efficiently in Pareto optimal settings.</strong></p>
+<ul>
+<li><p>Scientific problems: new ways to rapidly simulate and optimise for multiple disciplines, while drawing high fidelity machine learning-enabled simulations.</p></li>
+<li><p>Innovations: new ways to reduce computational requirements through surrogates or reduced order models; probabilistic machine learning to quantify uncertainties; techniques to solve combinatorial optimisation; data-efficient learning in high dimensional spaces.</p></li>
+</ul>
+<p><strong>We have sparse data, and our designs arise from a creative process that owners don’t want to share. Each building, bridge, or city masterplan is unique.</strong></p>
+<ul>
+<li><p>Scientific problems: learning from spatial and geometric data such as 3D models; leveraging trained models across projects, and doing so while respecting intellectual property.</p></li>
+<li><p>Innovations: new forms of transfer learning, learning on graphs, differential privacy, generative modelling.</p></li>
+</ul>
+<p><strong>Our assets are often systems of systems, ingesting and producing vast amounts of disparate data. We must use this information to make better decisions.</strong></p>
+<ul>
+<li><p>Scientific problems: ways to mix many kinds of data — sensors, images, video, meteorological, anthropic, geospatial, geotechnical, environmental — to support decision-making for growing urbanisation and infrastructure, and to become resilient to climate events.</p></li>
+<li><p>Innovations: multi-modal learning, multi-fidelity, multi-hierarchical modelling, belief networks and much more!</p></li>
+</ul>
+<p><strong>The infrastructure we design and maintain has ever-changing demands. Whether it be a century-old bridge, carrying far heavier traffic compared to the original specification, or an operator looking to provision offshore wind farms. We must deal with unpredictability in how assets are utilised.</strong></p>
+<ul>
+<li><p>Scientific problems: better ways to predict and account for uncertainty in demand.</p></li>
+<li><p>Innovations: better techniques for demand forecasting, uncertainty quantification, agent-based modelling, stochastic optimisation, and sequential decision problems.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="erik-van-dijk-uAWRPtZ6n0s-unsplash.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by Erik van Dijk on Unsplash</figcaption>
+</figure>
+</div>
+<p>I’ve only covered a tiny section of the entire set of possible areas!</p>
+<p>We need a fundamental shift in the technology stack for dealing with data and computation at scale. As an example, a typical parametric study to solve an inverse problem (or to train a surrogate) might involve several thousands of runs of a simulation solver, and a large dataset to accompany. Traditional supercomputing and HPC facilities (whilst popular within academia) are usually uncommon in the built environment industry. The flexibility and agility afforded by public cloud services appear the most optimal solution to this problem. The advantages of high-performance computing on the cloud are hard to ignore; however, doing so needs modernisation, upskilling, and capability building. As an example, Arup works closely with AWS to solve some of the above problems at scale.</p>
+<p>So, with a rich tapestry of applied and fundamental problems to be solved, work is needed at both an application level as well as methodological level.</p>
 <hr>
-<p><strong>Competing Interest:</strong> Eleni Chatzi is currently an Associate Professor, and the Chair of Structural Mechanics, at the Institute of Structural Engineering, of the Department of Civil, Environmental and Geomatic Engineering (DBAUG), ETH Zürich. She is also a co-editor-in-chief of the DCE journal.</p>
-<p><strong>Keywords:</strong> Physics-informed machine learning; Digital Twin Technology; Systems thinking; Data assimilation; Structural Health Monitoring</p>
+<p><strong>Competing Interest:</strong> <a href="https://www.linkedin.com/in/ramaseshankannan/">Dr Ramaseshan Kannan</a> is Head of Computational Science at Arup and a <a href="https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-awardees/induction-awardees/dr-ramaseshan-kannan-arup">Royal Academy of Engineering</a> Industrial Research Fellow.</p>
+<p><strong>Keywords:</strong> Computational Science; Built Environment; Scientific Machine Learning; Sustainability</p>
 <hr>
 <p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
