@@ -2,7 +2,7 @@
 title: "Editor’s Insights: Data-Centric Engineering of Monitored Systems"
 author: "Eleni Chatzi"
 date: "2023-11-28"
-categories: [Editorial]
+categories: [Editorial, Academic]
 image: "michael-dziedzic-kMgwpYA4orI-unsplash.jpg"
 description: " Prof. Eleni Chatzi (ETH) discusses emerging themes of physics-informed ML, DTs, and systems thinking."
 ---
