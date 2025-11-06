@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="DCE">
+<meta name="dcterms.date" content="2021-12-13">
+<meta name="description" content="These guidelines are based on those provided by the Data &amp; Policy Blog">
 
-<title>About – DCE-blog</title>
+<title>The DCE Blog: Instructions for Authors – DCE-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +23,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-52910846a82ee785d618f7f28beff77c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-52910846a82ee785d618f7f28beff77c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,21 +106,50 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/DCE-mod.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/DCE-mod.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">DCE-blog</span>
     </a>
   </div>
@@ -92,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -113,58 +181,119 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The DCE Blog: Instructions for Authors</h1>
+                  <div>
+        <div class="description">
+          These guidelines are based on those provided by the <a href="https://medium.com/u/9002f5d492c3%20(CUP)">Data &amp; Policy Blog</a>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Guidelines</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>DCE </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 13, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-    <img src="images/DCE-bridge-dark.png" class="about-image " style="width: 100%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-<p class="subtitle lead">Data-Centric Engineering Blog</p>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header> <main class="content" id="quarto-document-content">
-<p>This is the blog for Data-Centric Engineering (cambridge.org/dce), an open-access journal at the interface of engineering and data science.</p>
-<section id="editors-in-chief" class="level4">
-<h4 data-anchor-id="editors-in-chief">Editors in chief</h4>
-<p>Eleni Chatzi (ETH Zürich), Mark Girolami (University of Cambridge &amp; The Alan Turing Institute), Kenichi Soga (University of California).</p>
-</section>
-<section id="executive-editors" class="level4">
-<h4 data-anchor-id="executive-editors">Executive editors</h4>
-<p>Stéphane Bordas (University of Luxembourg), Roger Ghanem (University of Southern California), Detlef Hohl (Shell), Visakan Kadirkamanathan (University of Sheffield), Youssef Marzouk (Massachusetts Institute of Technology), Omar Matar (Imperial College London), Sumeetpal Singh (University of Cambridge), Kenichi Soga (University of California Berkeley), David White (University of Southampton), Philip J. Withers (University of Manchester).</p>
-</section>
-<section id="section" class="level4">
-<h4 data-anchor-id="section"></h4>
-<p>Blog edited by <a href="https://sheffield.ac.uk/mac/people/research-staff/tina-dardeno">Tina Dardeno</a> (University of Sheffield) and co-edited by <a href="https://labull.github.io">Lawrence Bull</a> (University of Glasgow).</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>[Updated: Oct-2024]</p>
+<p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>.</em></p>
 <hr>
-<p>The views expressed in this blog are those of the listed author, they do not represent the formal view of the DCE team.</p>
+<p>The DCE blog is a channel for sharing informed opinions and perspectives relating to research and technology in data-centric engineering. Articles should explore the benefits and implications of data science when improving the reliability, safety, and efficiency engineered systems.</p>
+<p>Suggested blogs:</p>
+<ul>
+<li>Translational [industry]</li>
+<li>Research [academic]</li>
+<li>Tutorial [including <code>code</code> examples]</li>
+<li>Article summaries [publications of DCE journal]</li>
+</ul>
+<section id="author-profile" class="level2">
+<h2 class="anchored" data-anchor-id="author-profile">Author profile</h2>
+<p>Prospective authors can include practitioners or researchers working at the interface of data science and engineering. Authors can include academics in universities and similar institutions, or professionals engaged with transformative data practices in industry. We actively encourage individuals with diverse backgrounds to propose posts. We apply the same authorship principles as the DCE journal. The editor cannot mediate disputes, any changes in authorship will require the approval of all current and proposed authors. Authors should declare any relevant competing interests in their blog. Posts associated with sponsorship will be acknowledged as such. We expect all authors to follow the guidelines and recommendations below. To submit a blog for our consideration, please contact us at <a href="mailto:dce@cambridge.org">dce@cambridge.org</a></p>
+</section>
+<section id="guidelines-and-recommendations" class="level1">
+<h1>Guidelines and recommendations</h1>
+<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<section id="format" class="level2">
+<h2 class="anchored" data-anchor-id="format">Format</h2>
+<p>We seek to publish pieces between 500 words and 1500 words. If longer, we may consider publication in series, at the editor’s discretion. If a blog is based on a published article, the authors should provide a link to the DCE publication.</p>
+</section>
+<section id="style" class="level2">
+<h2 class="anchored" data-anchor-id="style">Style</h2>
+<p>The main goal is brevity and focus. Outside of academic and tutorial posts, language should be understood by the general public with interests in new technologies of engineering data-science. Technical terms and jargon should be defined when used, ideally avoided if the terminology does not explicitly contribute to the discussion. The author should deal directly with the matter at hand, avoiding long introductions. The text should stand in itself: whilst you can include references, the post should not heavily rely on external sources to be understood.</p>
+</section>
+<section id="evidence-and-referencing" class="level2">
+<h2 class="anchored" data-anchor-id="evidence-and-referencing">Evidence and referencing</h2>
+<p>There is no need for academic citation styles. Links are sufficient, which should offer access to published works that provide details or examples. It is always better to direct readers to open-access sources. The author can provide links in-text to the editorial team, who will add them to the final publication. Although the citation format is informal, authors should take care to appropriately acknowledge any sources and avoid plagiarism.</p>
+</section>
+<section id="visual-resources" class="level2">
+<h2 class="anchored" data-anchor-id="visual-resources">Visual resources</h2>
+<p>Visual resources (including charts, diagrams and graphs) can be useful to introduce and summarise content. They should be labelled appropriately and connected to the sources of primary or secondary data. The editorial team may add images to blog posts to facilitate reading. Preferably, the author has proper rights of use and access to specific images and seeks to have them included in the publication.</p>
+<p>For tutorial and/or academic posts, one can display code,</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello_world():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"hello, world!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>equations,</p>
+<p><span class="math display">\[
+\ddot{x}+\delta \dot{x}+\alpha x+\beta x^3 = f(t)
+\]</span></p>
+<p>as well as graphs, etc. All the functionality of <code>qaurto</code> is available, see the <a href="https://quarto.org/">documentation</a> for details.</p>
+</section>
+<section id="editorial-input" class="level2">
+<h2 class="anchored" data-anchor-id="editorial-input">Editorial input</h2>
+<p>All posts will be assessed by the DCE editorial team before a decision is made about publication. Our communications editor may suggest changes to authors, including language, sources and structure. If the changes needed are major, we may suggest a different deadline or theme for their consideration. Corrections and updates to the blog are at the discretion of the DCE editorial team. Authors will be informed/consulted on any changes. All changes, including removal, will be made transparently.</p>
+</section>
+<section id="post-publication" class="level2">
+<h2 class="anchored" data-anchor-id="post-publication">Post-publication</h2>
+<p>The DCE team will encourage the author to promote the published article across their personal social media profiles and any associated institutional accounts - including universities, research groups and others. DCE may write additional material and create graphics or videos to promote the contribution. The blog post might be used across all DCE communication channels: the website, newsletter, and social media.</p>
+<hr>
+<p><em>This is the blog for <a href="https://www.cambridge.org/core/journals/data-centric-engineering">Data-Centric Engineering</a>, an open-access journal published by Cambridge University Press and supported by the Lloyd’s Register Foundation. You can also find us on <a href="https://www.linkedin.com/company/data-centric-engineering/">LinkedIn</a> and <a href="https://x.com/dce_journal?s=21&amp;t=UlVCTdhrJw2BrdGzFkG5AA">X</a>. <a href="https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors">Here are instructions</a> for submitting an article to the journal.</em></p>
 
 
 </section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://x.com/dce_journal" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://uk.linkedin.com/company/data-centric-engineering?trk=public_post_feed-actor-name" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -228,7 +357,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/DCE-journal\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
