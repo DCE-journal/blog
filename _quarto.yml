@@ -8,8 +8,6 @@ website:
       - about.qmd
       - icon: linkedin
         href: https://uk.linkedin.com/company/data-centric-engineering/
-      - icon: twitter
-        href: https://x.com/dce_journal
     background: rgb(157, 202, 242)
     logo: images/DCE-mod.png
 format:
