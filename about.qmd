@@ -5,9 +5,6 @@ image: images/DCE-bridge-dark.png
 about:
   template: marquee
   links:
-    - icon: twitter
-      href: https://x.com/dce_journal
-      text: Twitter
     - icon: linkedin
       href: https://uk.linkedin.com/company/data-centric-engineering?trk=public_post_feed-actor-name
       text: LinkedIn
