@@ -7,7 +7,7 @@ image: "tamar.jpg"
 description: "Prof. Elizabeth Cross and Dr. Matthew Jones from the University of Sheffield discuss Gaussian process regression for physics-informed ML"
 ---
 
-_This blog introduces a peer-reviewed [position paper](https://doi.org/10.1017/dce.2024.2) in the open-access DCE journal. [Prof. Elizabeth Cross](https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross) and [Dr. Matthew Jones](https://sheffield.ac.uk/mac/people/research-staff/matthew-jones) from the University of Sheffield discuss Gaussian process regression for physics-informed machine learning._
+_This blog introduces a peer-reviewed [position paper](https://doi.org/10.1017/dce.2024.2) in the open-access DCE journal. [Prof. Elizabeth Cross](https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross) and [Dr. Matthew Jones](https://matthewrhysjones.github.io/) from the University of Sheffield discuss Gaussian process regression for physics-informed machine learning._
 
 ---
 
@@ -95,11 +95,11 @@ What both examples here show is that building physical insight into a machine le
 ---
 
 **Competing Interest:**
- [Dr. Matthew Jones](https://sheffield.ac.uk/mac/people/research-staff/matthew-jones) is a Research Fellow at the University of Sheffield, UK. [Elizabeth Cross](https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross) is a Professor and Director of Research and Innovation for the Faculty of Engineering at the University of Sheffield, UK.
+ [Dr. Matthew Jones](https://matthewrhysjones.github.io/) is a Research Fellow at the University of Sheffield, UK. [Elizabeth Cross](https://sheffield.ac.uk/mac/people/mech-eng-academic-staff/elizabeth-cross) is a Professor and Director of Research and Innovation for the Faculty of Engineering at the University of Sheffield, UK.
 
 **Keywords:**
 Physics-Informed Machine Learning; Structural Monitoring; Partial domain knowledge; Digital Twins
 
 ---
 
-_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/) and [X](https://x.com/dce_journal?s=21&t=UlVCTdhrJw2BrdGzFkG5AA). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._
+_This is the blog for [Data-Centric Engineering](https://www.cambridge.org/core/journals/data-centric-engineering), an open-access journal published by Cambridge University Press and supported by the Lloyd's Register Foundation. You can also find us on [LinkedIn](https://www.linkedin.com/company/data-centric-engineering/). [Here are instructions](https://www.cambridge.org/core/journals/data-centric-engineering/information/instructions-for-authors) for submitting an article to the journal._
